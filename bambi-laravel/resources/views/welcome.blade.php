@@ -22,6 +22,6 @@
     </head>
     <body class="antialiased">
         <h1>Welcome To Bambi Shoes Home Page</h1>
-        <p>test natalie</p> 
+        <p>test natalie.</p> 
     </body>
 </html>
