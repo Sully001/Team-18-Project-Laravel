@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>Welcome Page/Home Page</h1>
-<p>('/') route</p>    
+<h1>About Page</h1>
+<p>('/about') route</p>    
 @endsection

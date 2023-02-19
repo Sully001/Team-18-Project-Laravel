@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/product', function () {
+    return view('product');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/basket', function () {
+    return view('basket');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
