@@ -9,9 +9,16 @@ class ProductController extends Controller
 {
     //Data retrieval has been commented out to not affect front end development
     public function index() {
-       //$products = Product::all();
+       $products = Product::all();
         return view('shop', [
-            //'products' => $products,
+            'products' => $products,
+        ]);
+    }
+
+    public function show($id) {
+        $product = Product::findorFail($id);
+        return view('product', [
+            'product' => $product,
         ]);
     }
 }
