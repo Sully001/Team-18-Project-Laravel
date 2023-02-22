@@ -24,14 +24,14 @@ class ProductController extends Controller
 
     public function shopMen() {
         $products = Product::where('product_gender', '=', 'Men')->get();
-        return view('shopmen', [
+        return view('shop', [
             'products' => $products,
         ]);
     }
 
     public function shopWomen() {
         $products = Product::where('product_gender', '=', 'Women')->get();
-        return view('shopwomen', [
+        return view('shop', [
             'products' => $products,
         ]);
     }
