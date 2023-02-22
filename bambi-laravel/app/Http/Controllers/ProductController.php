@@ -8,8 +8,12 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     //Data retrieval has been commented out to not affect front end development
-    public function index() {
-       $products = Product::all();
+    public function index(Request $request) {
+       if ($request->exists('sort')) {
+            $products = Product::orderBy('product_price', $request->query('sort'))->get();
+       } else {
+            $products = Product::all();
+       }
         return view('shop', [
             'products' => $products,
         ]);
@@ -22,15 +26,23 @@ class ProductController extends Controller
         ]);
     }
 
-    public function shopMen() {
-        $products = Product::where('product_gender', '=', 'Men')->get();
+    public function shopMen(Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('product_gender', '=', 'Men')->orderBy('product_price', $request->query('sort'))->get();
+       } else {
+            $products = Product::where('product_gender', '=', 'Men')->get();
+       }
         return view('shop', [
             'products' => $products,
         ]);
     }
 
-    public function shopWomen() {
-        $products = Product::where('product_gender', '=', 'Women')->get();
+    public function shopWomen(Request $request) {
+        if ($request->exists('sort')) {
+            $products = Product::where('product_gender', '=', 'Women')->orderBy('product_price', $request->query('sort'))->get();
+       } else {
+            $products = Product::where('product_gender', '=', 'Women')->get();
+       }
         return view('shop', [
             'products' => $products,
         ]);

@@ -9,6 +9,12 @@
 <a href="{{ route('products.men')}}">Men</a>
 <a href="{{ route('products.women')}}">Women</a>
 
+<br><br>
+
+<a href="{{ URL::current()."?sort=desc" }}">Price - High To Low</a>
+<a href="{{ URL::current()."?sort=asc" }}">Price - Low To High</a>
+
+<br><br>
 
 <div class="flex-container">
     @foreach ($products as $product)
