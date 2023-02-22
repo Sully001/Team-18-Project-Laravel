@@ -7,7 +7,7 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    //Data retrieval has been commented out to not affect front end development
+    //Method to get all products. Checks if sort has been requested
     public function index(Request $request) {
        if ($request->exists('sort')) {
             $products = Product::orderBy('product_price', $request->query('sort'))->get();
@@ -19,6 +19,7 @@ class ProductController extends Controller
         ]);
     }
 
+    //Retrieves a single product
     public function show($id) {
         $product = Product::findorFail($id);
         return view('product', [
@@ -26,6 +27,7 @@ class ProductController extends Controller
         ]);
     }
 
+    //Gets all mens products and checks if sorting has been requested
     public function shopMen(Request $request) {
         if ($request->exists('sort')) {
             $products = Product::where('product_gender', '=', 'Men')->orderBy('product_price', $request->query('sort'))->get();
@@ -37,6 +39,7 @@ class ProductController extends Controller
         ]);
     }
 
+    //Gets all womens products and checks if sorting has been requested
     public function shopWomen(Request $request) {
         if ($request->exists('sort')) {
             $products = Product::where('product_gender', '=', 'Women')->orderBy('product_price', $request->query('sort'))->get();
