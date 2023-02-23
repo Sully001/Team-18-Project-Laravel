@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Size;
 
 class ProductController extends Controller
 {
@@ -22,8 +23,11 @@ class ProductController extends Controller
     //Retrieves a single product
     public function show($id) {
         $product = Product::findorFail($id);
+        //Grabs all sizes and their stock levels for each size
+        //$sizes = Size::where('product_id', '=', $id)->get();
         return view('product', [
             'product' => $product,
+            //'sizes' => $sizes,
         ]);
     }
 
