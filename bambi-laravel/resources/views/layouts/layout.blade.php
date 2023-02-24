@@ -21,7 +21,6 @@
             <button>Logout</button>
         </a>
 
-        <p>Logged in Person Name</p>
         @yield('content')
     </body>
 </html>
