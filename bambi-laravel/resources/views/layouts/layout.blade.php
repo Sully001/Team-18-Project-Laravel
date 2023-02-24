@@ -21,6 +21,12 @@
             <button>Logout</button>
         </a>
 
+        @if(auth()->check())
+            <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p>    
+        @else
+            <p>No user logged in</p>
+        @endif
+            
         @yield('content')
     </body>
 </html>
