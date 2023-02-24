@@ -2,9 +2,13 @@
 
 @section('content')
 
-    <h1>Register Section</h1>
+    @if (session('mssg'))
+        {{ session('mssg') }}
+    @endif
 
-    <form action="{{ route('login') }}" method="POST">
+
+    <h1>Register Section</h1>
+    <form action="{{ route('register') }}" method="POST">
         @csrf
         <div>
             <label for="first_name">First Name:</label>
@@ -42,8 +46,31 @@
 
     <h1>Login Section</h1>
 
+    @if (session('status'))
+        {{ session('status') }}
+    @endif
 
+    <form action="{{ route('signin') }}" method="POST">
+        @csrf
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="youremail@example.com" value="{{ old('email') }}">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
 
+        <div class="errorCheck">
+            @if($errors->any())
+                <div class="statusCheck">
+                 @foreach ($errors->all() as $error)
+                        <p>{{$error}}</p>
+                    @endforeach
+                </div>
+            @endif
+        </div>
 
-
+        <button type="submit">Login</button>
+    </form>
 @endsection

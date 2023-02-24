@@ -11,21 +11,30 @@
         <a href="{{ route('welcome') }}">
             <button>Home</button>
         </a>
-        <a href="{{ route('login') }}">
-            <button>Login</button>
-        </a>
-        <a href="{{ route('login') }}">
-            <button>Register</button>
-        </a>
-        <a href="">
-            <button>Logout</button>
-        </a>
+        @guest
+             <a href="{{ route('login') }}">
+                <button>Login</button>
+            </a>
+            <a href="{{ route('login') }}">
+                <button>Register</button>
+            </a>
+        @endguest
+        
 
-        @if(auth()->check())
+        @auth
+        {{-- Form should be styled inline to fit in the navbar --}}
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
             <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p>    
-        @else
+        @endauth
+        
+        @guest
             <p>No user logged in</p>
-        @endif
+        @endguest
+            
+    
             
         @yield('content')
     </body>
