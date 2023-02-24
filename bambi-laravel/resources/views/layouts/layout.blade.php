@@ -7,6 +7,21 @@
         <title>Laravel</title>
     </head>
     <body>
+        
+        <a href="{{ route('welcome') }}">
+            <button>Home</button>
+        </a>
+        <a href="{{ route('login') }}">
+            <button>Login</button>
+        </a>
+        <a href="{{ route('login') }}">
+            <button>Register</button>
+        </a>
+        <a href="">
+            <button>Logout</button>
+        </a>
+
+        <p>Logged in Person Name</p>
         @yield('content')
     </body>
 </html>
