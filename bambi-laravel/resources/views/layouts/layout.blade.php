@@ -32,7 +32,7 @@
         </form>
             <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p> 
             
-            <a href="{{ route('basket') }}">
+            <a href="{{ route('basket', auth()->user()->id) }}">
                 <button>Basket</button>
             </a>
         @endauth

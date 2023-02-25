@@ -41,7 +41,8 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register')
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
-Route::get('/basket', [BasketController::class, 'index'])->name('basket');
+Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
+Route::post('/basket/{id}', [BasketController::class, 'store'])->name('basket.store');
 
 
 Route::get('/about', function () {
