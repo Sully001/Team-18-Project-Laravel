@@ -12,9 +12,10 @@
       @php
        $subtotal = 0;
        foreach ($basket as $item) {
-        $subtotal = $item->price * $item->quantity;
-        echo '£'.$subtotal;
+        $sum = $item->price * $item->quantity;
+        $subtotal += $sum;
        }
+       echo '£'.$subtotal;
       @endphp
     </p>
     <p>Total: @php echo '£'.$subtotal @endphp</p>
