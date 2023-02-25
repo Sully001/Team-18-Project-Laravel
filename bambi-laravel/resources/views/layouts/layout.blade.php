@@ -11,6 +11,9 @@
         <a href="{{ route('welcome') }}">
             <button>Home</button>
         </a>
+        <a href="{{ route('products.index') }}">
+            <button>Shop</button>
+        </a>
         @guest
              <a href="{{ route('login') }}">
                 <button>Login</button>
@@ -27,7 +30,11 @@
             @csrf
             <button type="submit">Logout</button>
         </form>
-            <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p>    
+            <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p> 
+            
+            <a href="{{ route('basket') }}">
+                <button>Basket</button>
+            </a>
         @endauth
         
         @guest

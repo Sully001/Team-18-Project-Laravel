@@ -1,9 +1,11 @@
 <?php
 
+use App\Models\Basket;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BasketController;
 use App\Http\Controllers\LogoutController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
@@ -39,6 +41,9 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register')
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
+Route::get('/basket', [BasketController::class, 'index'])->name('basket');
+
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -47,8 +52,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/basket', function () {
-    return view('basket');
-});
 
 
