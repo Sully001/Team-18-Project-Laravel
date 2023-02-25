@@ -1,5 +1,10 @@
 @extends('layouts.layout')
 
+@section('css')
+  <link rel="stylesheet" href="/css/login.css">
+@endsection
+
+
 @section('content')
 
     @if (session('mssg'))

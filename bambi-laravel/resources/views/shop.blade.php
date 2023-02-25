@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('css')
+  <link rel="stylesheet" href="/css/shop.css">
+@endsection
+
 @section('content')
 
 <h1>Welcome To the Shop Page</h1>

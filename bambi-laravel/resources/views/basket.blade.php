@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('css')
+  <link rel="stylesheet" href="/css/basket.css">
+@endsection
+
 @section('content')
 
     <h1>Basket Page</h1>  

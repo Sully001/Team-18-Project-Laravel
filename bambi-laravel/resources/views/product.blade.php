@@ -1,5 +1,9 @@
 @extends('layouts.layout')
 
+@section('css')
+  <link rel="stylesheet" href="/css/product.css">
+@endsection
+
 @section('content')
 
     @if (session('add'))
