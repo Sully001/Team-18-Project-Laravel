@@ -22,7 +22,7 @@
 
     <h3>Choose a size:</h3>
 
-    <form action="{{ route('basket.store', auth()->user()->id) }}" method="POST">
+    <form action="{{ route('basket.store') }}" method="POST">
       @csrf
         <input type="hidden" name="product" id="product" value="{{ $product->product_id }}">
 

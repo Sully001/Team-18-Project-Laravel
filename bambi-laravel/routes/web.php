@@ -42,7 +42,7 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
-Route::post('/basket/{id}', [BasketController::class, 'store'])->name('basket.store');
+Route::post('/basket', [BasketController::class, 'store'])->name('basket.store');
 
 
 Route::get('/about', function () {
