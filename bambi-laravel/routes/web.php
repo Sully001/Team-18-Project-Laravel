@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
@@ -19,7 +20,7 @@ use App\Http\Controllers\RegisterController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//Route for homepage
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 
 //Route for all products
@@ -37,12 +38,16 @@ Route::get('/product/{id}', [ProductController::class, 'show'])->name('products.
 Route::post('login', [LoginController::class, 'store'])->name('signin');
 Route::get('/loginpage', [RegisterController::class, 'index'])->name('login');
 Route::post('/register', [RegisterController::class, 'store'])->name('register');
-
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
-
+//Basket routes
 Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
 Route::post('/basket', [BasketController::class, 'store'])->name('basket.store');
+
+//Order routes
+Route::post('/order', [OrderController::class, 'checkout'])->name('checkout');
+
+
 
 
 Route::get('/about', function () {

@@ -40,6 +40,8 @@
         
         @guest
             <p>No user logged in</p>
+            <button>Basket</button>
+            
         @endguest
             
     
