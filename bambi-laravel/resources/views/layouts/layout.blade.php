@@ -23,18 +23,20 @@
     <div class="navbar">
         <ul>
           <div class="nav-logo" id="nav-logo">
-            <a href="/"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt style="width:15vw; height:9vh;"></a></img>
+            <a href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt style="width:15vw; height:9vh;"></a></img>
           </div>
-          <li><a class="active li" href="/shop">Shop</a></li>
+          <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
           <li><a class="li" href="/about">About Us</a></li>
           <li><a class="li" href="/contact">Contact Us</a></li>
           <li><a class="li" href="/basket">Basket</a></li>
-          <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="/login">Log In</a></button></li>
+          @guest
+          <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="{{ route('login') }}">Log In</a></button></li>
         </ul>
+          @endguest
     </div>
  
         
-        <a href="{{ route('welcome') }}">
+        <!-- <a href="{{ route('welcome') }}">
             <button>Home</button>
         </a>
         <a href="{{ route('products.index') }}">
@@ -47,25 +49,27 @@
             <a href="{{ route('login') }}">
                 <button>Register</button>
             </a>
-        @endguest
+        @endguest -->
         
 
         @auth
         {{-- Form should be styled inline to fit in the navbar --}}
         <form action="{{ route('logout') }}" method="POST">
             @csrf
-            <button type="submit">Logout</button>
+          <!-- <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li> -->
+          <button>Log Out</button>
         </form>
             <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p> 
             
             <a href="{{ route('basket', auth()->user()->id) }}">
                 <button>Basket</button>
             </a>
+            <!-- <li><a class="li" href="{{ route('basket', auth()->user()->id) }}">Basket</a></li> -->
         @endauth
         
         @guest
-            <p>No user logged in</p>
-            <button>Basket</button>
+            <!-- <p>No user logged in</p>
+            <button>Basket</button> -->
             
         @endguest
             
