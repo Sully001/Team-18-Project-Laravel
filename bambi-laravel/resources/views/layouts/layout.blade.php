@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        @yield('css')
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
@@ -32,7 +32,43 @@
           <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="/login">Log In</a></button></li>
         </ul>
     </div>
+ 
+        
+        <a href="{{ route('welcome') }}">
+            <button>Home</button>
+        </a>
+        <a href="{{ route('products.index') }}">
+            <button>Shop</button>
+        </a>
+        @guest
+             <a href="{{ route('login') }}">
+                <button>Login</button>
+            </a>
+            <a href="{{ route('login') }}">
+                <button>Register</button>
+            </a>
+        @endguest
+        
 
+        @auth
+        {{-- Form should be styled inline to fit in the navbar --}}
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+            <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p> 
+            
+            <a href="{{ route('basket', auth()->user()->id) }}">
+                <button>Basket</button>
+            </a>
+        @endauth
+        
+        @guest
+            <p>No user logged in</p>
+            <button>Basket</button>
+            
+        @endguest
+            
     <!-- <div class="footer">
         <br>
         <br>
@@ -63,13 +99,8 @@
               </div>
             </div>
         </div>
-    </div> -->
-
-    
-       
-
-
-
-@yield('content')
-</body>    
+    </div> -->  
+            
+        @yield('content')
+    </body>
 </html>

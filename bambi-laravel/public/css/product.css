@@ -1,0 +1,31 @@
+.radio {
+    display: none;
+  }
+  
+  .label {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    border: 2px solid;
+  }
+  
+  #size-4:checked ~ .label-1,
+  #size-5:checked ~ .label-2,
+  #size-6:checked ~ .label-3,
+  #size-7:checked ~ .label-4,
+  #size-8:checked ~ .label-5,
+  #size-9:checked ~ .label-6,
+  #size-10:checked ~ .label-7,
+  #size-11:checked ~ .label-8,
+  #size-12:checked ~ .label-9,
+  #size-13:checked ~ .label-10 {
+    background-color: #0069D9;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
