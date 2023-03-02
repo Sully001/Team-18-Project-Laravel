@@ -1,3 +1,4 @@
+/* Formatting image with logo and button */
 
 .homepage {
     background-image: url('/Website-Images/hp-background.png'); 
@@ -26,99 +27,159 @@
     padding: 2px 15px;
   }
 
-  .homepage .login-btn:hover {
-    color: #5e4b05;
-  }
+.homepage .login-btn:hover {
+color: #5e4b05;
+}
+
+/* "New In" products section */
 
 .new-in-contain {
     display: flex;
     background-color: white;
+    padding: 50px;
+    padding-top: 10px;
 }
 
 .new {
   width: 100%;
   height: 50px;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
+.new h2 {
+    font-weight: bold;
+    margin-left: 20px;
+}
 
 .card {
-    /* width: 11.875em;
-    height: 16.5em; */
-    /* box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: all 120ms;
-    display: flex;
-    justify-content: center; */
-
     align-items: center;
     padding: 0.5em;
     padding-bottom: 3.4em;
-    
-    height: 400px;
-    width: 210px;
-    left: 12%;
+    left: 14%;
     bottom: 20%;
     border-radius: 50px;
     margin-right: 50px;
+    margin-left: 25px;
+   }
 
-   }
-   
-   .card::after {
-    content: "Quick View";
-    padding-top: 1.25em;
-    padding-left: 1.25em;
-    position: absolute;
-    left: 0;
-    bottom: -60px;
-    background: #B39836;
-    color: #fff;
-    text-align: center;
-    height: 2.5em;
-    width: 100%;
-    transition: all 80ms;
-    font-weight: 600;
-    text-transform: uppercase;
-   }
-   
-   .card .title {
-    /* font-family: Arial, Helvetica, sans-serif; */
+.card .title {
     font-size: 0.9em;
     position: absolute;
     left: 0.625em;
     bottom: 1.875em;
     font-weight: 400;
-   }
-   
-   .card .price {
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+
+.card .price {
     font-size: 0.9em;
     position: absolute;
     left: 0.625em;
     bottom: 0.625em;
-   }
-   
-   .card:hover::after {
+}
+
+.card:hover::after {
     bottom: 0;
-   }
-   
-   .card:active {
+}
+
+.card:active {
     transform: scale(0.98);
-   }
-   
-   .card:active::after {
-    content: "Added !";
-    height: 3.125em;
-   }
-   
-   .text {
+}
+
+.text {
     max-width: 55px;
-   }
-   
-   .image {
+}
+
+.image {
     background: rgb(241, 241, 241);
     width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
+}
+
+/* Reviews section */
+
+.reviews {
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px;
+    background-color: #FFC14D;
+  }
+
+.reviews h2 {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.reviews-contain {
+    display: flex;
+    background-color: #FFC14D;
+    padding: 50px;
+}
+
+.review-card {
+    width: 190px;
+    height: 300px;
+    left: 13%;
+    border-radius: 20px;
+    background: #FFF6D3;
+    position: relative;
+    padding: 1.8rem;
+    transition: 0.5s ease-out;
+    margin-left: 50px;
+    margin-right: 30px;
+   }
+   
+   .review-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+   }
+
+   .review-title {
+     font-weight: bolder;
+   }
+   
+   .review-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #B39836;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #B39836;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+
+   .review-card:hover {
+    border-color: #B39836;
+    box-shadow: 0 4px 18px 0 #B39836;
+   }
+   
+   .card:hover .review-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
    }
