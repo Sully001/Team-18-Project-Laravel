@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         @yield('css')
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -24,60 +25,38 @@
 
     <div class="navbar">
         <ul>
-          <div class="nav-logo" id="nav-logo">
-            <a href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt style="width:15vw; height:9vh;"></a></img>
-          </div>
-          <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
-          <li><a class="li" href="/about">About Us</a></li>
-          <li><a class="li" href="/contact">Contact Us</a></li>
-          <li><a class="li" href="/basket">Basket</a></li>
-          @guest
-          <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="{{ route('login') }}">Log In</a></button></li>
-          @endguest
-          </ul>
+            <div class="nav-logo" id="nav-logo">
+                <a href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt style="width:15vw; height:9vh;"></a></img>
+            </div>
+            <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li>
+            <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
+            <li><a class="li" href="/about">About Us</a></li>
+            <li><a class="li" href="/contact">Contact Us</a></li>
+            @if (Auth::check())
+                <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket</a></li>
+                
+            @else
+                <li><a class="li" href="">Basket</a></li>
+            @endif
+          
+            @guest
+            <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="{{ route('login') }}">Log In / Register</a></button></li>
+            @endguest
+
+            @auth
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li>
+            </form>
+                <li class="li-right">Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</li> 
+            @endauth
+        </ul>
     </div>
  
         
-        <!-- <a href="{{ route('welcome') }}">
-            <button>Home</button>
-        </a>
-        <a href="{{ route('products.index') }}">
-            <button>Shop</button>
-        </a>
-        @guest
-             <a href="{{ route('login') }}">
-                <button>Login</button>
-            </a>
-            <a href="{{ route('login') }}">
-                <button>Register</button>
-            </a>
-        @endguest -->
-        
+    @yield('content')
 
-        @auth
-        {{-- Form should be styled inline to fit in the navbar --}}
-        <form action="{{ route('logout') }}" method="POST">
-            @csrf
-          <!-- <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li> -->
-          <button>Log Out</button>
-        </form>
-            <p>Logged in:{{ auth()->user()->first_name }} {{auth()->user()->last_name}}</p> 
-            
-            <a href="{{ route('basket', auth()->user()->id) }}">
-                <button>Basket</button>
-            </a>
-            <!-- <li><a class="li" href="{{ route('basket', auth()->user()->id) }}">Basket</a></li> -->
-        @endauth
-        
-        @guest
-            <!-- <p>No user logged in</p>
-            <button>Basket</button> -->
-            
-        @endguest
-            
-        @yield('content')
-
-  <div class="footer">
+    <div class="footer">
         <div class="footer-content">
             <div class="footer-logo" id="foot-content-box">
                 <a href="/" class="logo"><img src="/images/Bambi_Shoes_Logo_no-bg.png" alt="" /></a>
@@ -123,9 +102,8 @@
             </div>
           </div>
         </div>
-  </div>  
+    </div>  
 
-  
 
     </body>
 </html>

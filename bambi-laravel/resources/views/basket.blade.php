@@ -11,6 +11,9 @@
   @if (session('empty'))
       <p>{{ session('empty') }}</p>  
   @endif
+  @if (session('delete'))
+      <p>{{ session('delete') }}</p>  
+  @endif
 
   <form action="{{ route('checkout')}}" method="POST">
     @csrf
@@ -38,6 +41,14 @@
       <p>Shoe Size: {{ $item->size }}</p>
       <p>Quantity: {{ $item->quantity }}</p>
       <p>Price: £{{ $item->price }}</p>  
+
+      <form action="{{ route('basket.remove') }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <input type="hidden" name="id" value="{{ $item->product_id }}">
+        <input type="hidden" name="size" value="{{ $item->size }}">
+        <button class="btn btn-danger">Remove</button>
+    </form>
   @endforeach
 
 @endsection

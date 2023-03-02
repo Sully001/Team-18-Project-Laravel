@@ -19,6 +19,7 @@
   padding-left: 50px;
   padding-right: 50px;
   display: block;
+  width: 100%;
 }
 
 .nav-logo {
@@ -152,3 +153,6 @@ hr {
   color: black;
 }
 
+form {
+  display: inline;
+}

@@ -7,11 +7,11 @@
 @section('content')
 
     @if (session('add'))
-        {{ session('add') }}
+      <div class="alert alert-warning" role="alert">
+        <p>{{ session('add') }}: <a href="{{ route('basket', auth()->user()->id) }}">Want to view your basket?</a>
+      </div>
     @endif
-
-    <h1>Welcome To the Product Page (For a single product)</h1>
-    <p>('/product') route</p>    
+  
     <img src="/images/{{ $product->product_image }}" alt="Shoes" height="300px" width="300px">
     <p>Product ID: {{ $product->product_id }}</p>
     <p>Product Brand: {{ $product->product_brand }}</p>

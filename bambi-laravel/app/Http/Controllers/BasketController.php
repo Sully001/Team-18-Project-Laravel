@@ -50,4 +50,14 @@ class BasketController extends Controller
 
         return redirect()->back()->with('add', 'Successfuly Added To Basket');
     }
+
+    public function destroy(Request $request) {
+        Basket::where('user_id', auth()->user()->id)
+        ->where('product_id', $request->id)
+        ->where('size', $request->size)
+        ->delete();
+        return redirect()->back()->with('delete', 'Successfully Deleted');
+    }
+         
 }
+

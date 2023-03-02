@@ -41,8 +41,11 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register')
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 //Basket routes
+Route::delete('/basket/remove', [BasketController::class, 'destroy'])->name('basket.remove');
 Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
 Route::post('/basket', [BasketController::class, 'store'])->name('basket.store');
+
+
 
 //Order routes
 Route::post('/order', [OrderController::class, 'checkout'])->name('checkout');

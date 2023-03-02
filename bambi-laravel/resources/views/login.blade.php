@@ -19,14 +19,23 @@
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" id="first_name" placeholder="First Name" value="{{ old('first_name') }}">
         </div>
+        @error('first_name')
+            <p>{{ $message }}</p>
+        @enderror
         <div>
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name" id="last_name" placeholder="Last Name" value="{{ old('last_name') }}">
         </div>
+        @error('last_name')
+            <p>{{ $message }}</p>
+        @enderror
         <div>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="youremail@example.com" value="{{ old('email') }}">
         </div>
+        @error('email')
+            <p>{{ $message }}</p>
+        @enderror
         <div>
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Password">
@@ -35,16 +44,9 @@
             <label for="password_confirmation">Repeat Password</label>
             <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Password">
         </div>
-
-        <div class="errorCheck">
-            @if($errors->any())
-                <div class="statusCheck">
-                 @foreach ($errors->all() as $error)
-                        <p>{{$error}}</p>
-                    @endforeach
-                </div>
-            @endif
-        </div>
+        @error('password')
+            <p>{{ $message }}</p>
+        @enderror
 
         <button type="submit">Register</button>
     </form>
@@ -65,17 +67,6 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password" placeholder="Password">
         </div>
-
-        <div class="errorCheck">
-            @if($errors->any())
-                <div class="statusCheck">
-                 @foreach ($errors->all() as $error)
-                        <p>{{$error}}</p>
-                    @endforeach
-                </div>
-            @endif
-        </div>
-
         <button type="submit">Login</button>
     </form>
 @endsection
