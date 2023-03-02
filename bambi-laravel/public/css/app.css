@@ -70,11 +70,11 @@ li a:hover {
 
 }
 
-/* .footer {
+.footer {
   background-color: #DADDDC;
   color: white;
-  position: fixed;
   display: flex;
+  flex-direction: column;
   margin-top: auto;
   left: 0;
   bottom: 0;
@@ -85,19 +85,18 @@ li a:hover {
   height: 160px;
   width: auto;
   margin: 40px 40px;
-  margin-bottom: 80px;
   margin-left: 50px;
 }
 
 .footer-content {
   display: flex;
+  width: 100%;
+  height: 30vh;
 }
 
 .footer-content #foot-content-box {
-  width: 1000px;
-  padding: 40px;
+  width: 100%;
   display: inherit;
-  margin-right: -230px;
 }
 
 .footer .footer-content .footer-links a {
@@ -121,13 +120,35 @@ li a:hover {
   color: #FFFFFF;
   padding: 2px 15px;
   margin-right: 0px;
+  margin-top: 40px;
+  height: 40px;
+
 }
 
 .footer .footer-content .footer-links :hover {
   color: #5e4b05;
   font-size: medium;
   transition: 0.2s;
-}  */
+} 
 
+hr {
+  color:#6B756B;
+  width: 80%;
+  margin: auto;
+}
 
+.footer-bottom {
+  padding: 0 50px;
+}
+
+.social {
+  display:flex;
+  color: black;
+  margin-left: -20px;
+}
+
+.social div a i {
+  padding-left: 40px;
+  color: black;
+}
 

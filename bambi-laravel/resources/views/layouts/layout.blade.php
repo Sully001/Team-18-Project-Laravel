@@ -14,6 +14,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/app.css">
 
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
         <title>Bambi</title>
 
     </head>
@@ -31,8 +33,8 @@
           <li><a class="li" href="/basket">Basket</a></li>
           @guest
           <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="{{ route('login') }}">Log In</a></button></li>
-        </ul>
           @endguest
+          </ul>
     </div>
  
         
@@ -73,9 +75,9 @@
             
         @endguest
             
-    <!-- <div class="footer">
-        <br>
-        <br>
+        @yield('content')
+
+  <div class="footer">
         <div class="footer-content">
             <div class="footer-logo" id="foot-content-box">
                 <a href="/" class="logo"><img src="/images/Bambi_Shoes_Logo_no-bg.png" alt="" /></a>
@@ -84,27 +86,46 @@
                 <a class="active" href="/shop">Shop</a><br>
                 <a href="/about">About Us</a><br>
                 <a href="/contact">Contact Us</a><br>
-                <br>
-                <li><button type="submit" class="login-foot li-right"><a class="login-foot" href="/login">Log In</a></button></li>
-            </div>
-            <div class="container">
-              <div class="d-flex justify-content-between py-3 my-4 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                  <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                  </a>
-                  <span class= "mb-md-0 text-muted">&copy; Bambi Shoes LTD, 2023</span>
-                </div>
-                <ul class="nav col-md-4 justify-content-end">
-                  <span class= "mb-md-0 text-muted" style="text-align: right; letter-spacing:-0.015em;">Follow Us:</span>
-                  <li class="ms-3"><a class="text-muted" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-                  <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/accounts/login/"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-                  <li class="ms-3"><a class="text-muted" href="https://en-gb.facebook.com/"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-                </ul>
-              </div>
+                <button type="button" onclick=window.location.href="{{ route('login') }}" class="login-foot li-right">Log In</button>
             </div>
         </div>
-    </div> -->  
-            
-        @yield('content')
+        <hr>
+        <div class="footer-bottom">
+          <div class="d-flex justify-content-between my-4">
+            <div class="col-md-4 d-flex align-items-center">
+              <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+              </a>
+              <span class= "mb-md-0 text-muted">&copy; Bambi Shoes LTD, 2023</span>
+            </div>
+
+            <div class="social">
+                <p>Follow Us:</p>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class='bx bxl-facebook  bx-sm'></i>
+                    </a>
+                </div>
+                <div class="twitter">
+                    <a href="https://www.twitter.com/" target="_blank">
+                        <i class='bx bxl-twitter bx-sm'></i>
+                    </a>
+                </div>
+                <div class="tiktok">
+                    <a href="https://www.tiktok.com/" target="_blank">
+                        <i class='bx bxl-tiktok bx-sm'></i>
+                    </a>
+                </div>
+                <div class="instagram">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class='bx bxl-instagram bx-sm'></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+  </div>  
+
+  
+
     </body>
 </html>

@@ -6,18 +6,11 @@
 
 @section('content')
 
-<!-- <div class="homepage-gif">
-    <h2>Welcome to Bambi!</h2>
-    <button type="button" onclick=window.location.href="{{ route('products.index') }}" class="login-btn">SHOP NOW</button>
-</div>  -->
-
 <div class="homepage">
-    <!-- <img src="/Website-Images/hp-background.png" style="width: 100%;
-    "alt="gif"> -->
     <button type="button" onclick=window.location.href="{{ route('products.index') }}" class="login-btn">SHOP NOW</button>
 </div>
 
-<div class="new">
+<div class="new-in" style="padding-top:15px;">
     <h2>New In</h2>
 </div>
 
@@ -47,7 +40,7 @@
     <div class="review-card">
     <div class="review-details">
         <p class="review-title">Mary P, Manchester</p>
-        <p class="review-body">"Amazing shoes, at an outstanding quality. Would definintely shop here again!"</p>
+        <p class="review-body">"Amazing shoes, at an outstanding quality. Would definitely shop here again!"</p>
     </div>
     </div>
 

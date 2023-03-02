@@ -40,13 +40,13 @@ color: #5e4b05;
     padding-top: 10px;
 }
 
-.new {
+.new-in {
   width: 100%;
   height: 50px;
   padding: 10px 20px;
 }
 
-.new h2 {
+.new-in h2 {
     font-weight: bold;
     margin-left: 20px;
 }
