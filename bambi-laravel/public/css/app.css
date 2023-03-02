@@ -14,8 +14,8 @@
 .navbar {
   box-sizing: border-box;
   background: #FFFFFF;
-  border: 1px solid #83958C;
-  border-radius: 5px;
+  border-top: 1px solid #83958C;
+  border-bottom: 1px solid #83958C;
   padding-left: 50px;
   padding-right: 50px;
   display: block;
