@@ -67,7 +67,7 @@
 
     <div class="review-card">
     <div class="review-details">
-        <p class="review-title">Samantha Wilson</p>
+        <p class="review-title">Samantha Wilson, Bath</p>
         <p class="review-body">"I love how soft the material on the shoes are, they are the perfect fit!"</p>
     </div>
     </div>
