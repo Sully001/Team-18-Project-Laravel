@@ -1,0 +1,81 @@
+
+#log_reg{
+    display: flex;
+    justify-content: center;
+    margin-top: 170px;
+    margin-bottom: 170px;
+}
+
+.form_sect{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 0.6px solid rgb(84, 84, 84);
+    width: 530px;
+    height: 540px;
+}
+
+.forms_{
+    margin-top: 80px;
+}
+
+.input_fields{
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    width: 340px;
+    color: black;
+}
+
+.header_caption{
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+
+.caption{
+    padding-left: 40px;
+}
+
+.header{
+    font-weight: bold;
+}
+
+#login_header{
+    margin-left: -48%;
+}
+
+#login_caption{
+    margin-left: -23%;
+}
+
+#register_header{ 
+    margin-left: -40%;
+}
+
+#reg_form{
+    margin-right: 40px;
+}
+
+#reg_submit{
+    margin-left: -223px;
+}
+
+#log_submit{
+    margin-left: -224px;
+}
+
+.submit_button{
+    border: none;
+    border-radius: 6px;
+    background-color: #B39836;
+    width: 120px;
+    height: 35px;
+    font-size: smaller;
+    color: white;
+    font-weight: bold;
+}
+
+.submit_button:hover{
+    background-color: #ddbc44;
+}
