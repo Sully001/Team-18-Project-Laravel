@@ -48,11 +48,11 @@
                 @enderror
                 <div>
                     <!--<label for="password">Password</label>-->
-                    <input class = "input_fields"  type="password" name="password" id="password" placeholder="Password">
+                    <input class = "input_fields"  type="password" name="password" id="password" placeholder="Create Password">
                 </div>
                 <div>
                     <!--<label for="password_confirmation">Repeat Password</label>-->
-                    <input class = "input_fields" type="password" name="password_confirmation" id="password_confirmation" placeholder="Password">
+                    <input class = "input_fields" type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password">
                 </div>
                 @error('password')
                     <p>{{ $message }}</p>
@@ -65,7 +65,7 @@
         <div class = "form_sect">
         <div class = "header_caption">
             <h2 class = "header" id = "login_header">Login</h2>
-            <p class = "caption" id = "register_header">Sign up today, it’s free</p>
+            <p class = "caption" id = "login_caption">Have an existing account, Log in?</p>
         </div>
 
             @if (session('status'))
