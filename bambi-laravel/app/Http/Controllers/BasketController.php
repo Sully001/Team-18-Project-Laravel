@@ -11,14 +11,34 @@ class BasketController extends Controller
 {
     public function index($id) {
         $basket = Basket::where('user_id', '=', $id)->get();
+        if (count($basket) == 0) {
+            return view('emptybasket');
+        }
+
+        $products = [];
+        $total = 0;
+        foreach ($basket as $item) {
+            //Get the corresponding product info
+            $product = Product::findorFail($item->product_id);
+            array_push($products, [
+                'id'=> $product->product_id,
+                'brand' => $product->product_brand,
+                'name' => $product->product_name,
+                'price' => $product->product_price,
+                'size' => $item->size,
+                'image' => $product->product_image, 
+                'quantity' => $item->quantity
+            ]);
+            $total += $item->quantity * $product->product_price;
+        }
         return view('basket', [
-            'basket' => $basket,
+            'products' => $products,
+            'total' => $total,
         ]);
     }
 
     public function store(Request $request) {
         //Get the actual item from the database
-        $product = Product::findorFail($request->product);
         $user_id = auth()->user()->id;
 
         if (DB::table('baskets')->where('user_id', '=', $user_id)
@@ -39,12 +59,8 @@ class BasketController extends Controller
             $basket = new Basket();
             $basket->user_id = $user_id;
             $basket->product_id = $request->product;
-            $basket->product_name = $product->product_name;
             $basket->size = $request->size;
             $basket->quantity = $request->quantity;
-            $basket->price = $product->product_price;
-            $basket->product_image = $product->product_image;
-
             $basket->save();
         }
 
@@ -56,6 +72,7 @@ class BasketController extends Controller
         ->where('product_id', $request->id)
         ->where('size', $request->size)
         ->delete();
+
         return redirect()->back()->with('delete', 'Successfully Deleted');
     }
          
