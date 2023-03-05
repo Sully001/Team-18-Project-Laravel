@@ -34,7 +34,7 @@
             <li><a class="li" href="/contact">Contact Us</a></li>
             @if (Auth::check())
                 <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket</a></li>
-                
+                <li><a class="li" href="{{ route('orders')}}">Orders</a></li>
             @else
                 <li><a class="li" href="">Basket</a></li>
             @endif
