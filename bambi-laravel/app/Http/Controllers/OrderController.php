@@ -4,39 +4,61 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Models\Basket;
+use App\Models\OrderDetail;
+use App\Models\Size;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
-    public function checkout() {
+    public function checkout(Request $request) {
         $userid = auth()->user()->id;
         $items = Basket::where('user_id', $userid)->get();
 
+        //If the basket is empty return "empty"
         if ($items->isEmpty()) {
             return redirect()->back()->with('empty', 'Your basket is empty');
         }
-        
-        
-        if (DB::table('orders')->max('order_id') == null) {
-            $newestID = 1;
-        } else {
-            $newestID = DB::table('orders')->max('order_id') + 1;
+
+        //Otherwise create a new order
+        $order = new Order();
+        $order->user_id = $userid;
+        $order->first_name = auth()->user()->first_name;
+        $order->last_name = auth()->user()->last_name;
+        $order->total = $request->total;
+
+        $order->save();
+        //Grab the id of the newly order 
+        $id = $order->id;
+
+        foreach ($items as $item) {
+            $detail = new OrderDetail();
+            $detail->order_id = $id;
+            $detail->product_id = $item->product_id;
+            $detail->product_size = $item->size;
+            $detail->quantity = $item->quantity;
+            $detail->save();
+
+            //Then grab each items stock by (size and product_id) and update it
+            $size = Size::where('product_id', $item->product_id)
+            ->where('product_size', $item->size)->get();
+
+            $stock = $size[0]['product_stock'] - $item->quantity;
+            
+            Size::where('product_id', $item->product_id)
+            ->where('product_size', $item->size)
+            ->update(['product_stock' => $stock ]);
         }
 
-        foreach($items as $item) {
-            $order = new Order();
-            $order->order_id = $newestID;
-            $order->user_id = $userid;
-            $order->product_id = $item->product_id;
-            $order->product_size = $item->size;
-            $order->quantity = $item->quantity;
-            $order->subtotal = $item->price * $item->quantity;
-
-            $order->save();
-        }
-
+        //Delete all users items from basket
         Basket::where('user_id', $userid)->delete();
         return view('checkout');
+    }
+
+    public function index() {
+        $orders = Order::where('user_id', auth()->user()->id)->get();
+        return view('orders', [
+            'orders' => $orders
+        ]);
     }
 }
