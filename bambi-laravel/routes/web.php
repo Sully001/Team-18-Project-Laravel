@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PreviousOrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
@@ -49,8 +50,10 @@ Route::post('/basket', [BasketController::class, 'store'])->name('basket.store')
 
 //Order routes
 Route::post('/order', [OrderController::class, 'checkout'])->name('checkout');
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
-
+//Order Detail Routes
+Route::get('/order/{id}', [PreviousOrderController::class, 'index'])->name('previous.orders');
 
 
 Route::get('/about', function () {
