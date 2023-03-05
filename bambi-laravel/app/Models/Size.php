@@ -9,4 +9,5 @@ class Size extends Model
 {
     use HasFactory;
     protected $table = "sizes";
+    public $timestamps = false;
 }
