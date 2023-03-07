@@ -1,15 +1,15 @@
 /* Formatting image with logo and button */
 
-.homepage {
+/* .homepage {
     background-image: url('/Website-Images/hp-background.png'); 
     background-size: 100%; 
     height: 700px; 
     width: 100%;
-}
+} */
 
 .homepage img {
     width: 100%;
-    height: 800px;
+    height: 80%;
 }
 
 .homepage .login-btn {

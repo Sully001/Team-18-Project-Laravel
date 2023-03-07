@@ -25,19 +25,21 @@
 
     <div class="navbar">
         <ul>
-            <div class="nav-logo" id="nav-logo">
-                <a href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt="" ></a></img>
+            <div class="subnav">
+                <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li>
+                <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
+                <li><a class="li" href="/about">About Us</a></li>
+                <li><a class="li" href="/contact">Contact Us</a></li>
+                @if (Auth::check())
+                    <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket</a></li>
+                    <li><a class="li" href="{{ route('orders')}}">Orders</a></li>
+                @else
+                    <li><a class="li" href="">Basket</a></li>
+                @endif
             </div>
-            <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li>
-            <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
-            <li><a class="li" href="/about">About Us</a></li>
-            <li><a class="li" href="/contact">Contact Us</a></li>
-            @if (Auth::check())
-                <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket</a></li>
-                <li><a class="li" href="{{ route('orders')}}">Orders</a></li>
-            @else
-                <li><a class="li" href="">Basket</a></li>
-            @endif
+            <div class="nav-logo" id="nav-logo">
+                <a class="li" href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt="" ></a></img>
+            </div>
           
             @guest
             <li><button type="submit" class="login-btn li-right"><a class="login-btn" href="{{ route('login') }}">Log In / Register</a></button></li>

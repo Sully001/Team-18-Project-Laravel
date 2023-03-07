@@ -23,11 +23,7 @@
 }
 
 .nav-logo {
-  position: absolute;
-  display: block;
-  margin: auto;
-  overflow: hidden;
-  left: 42%;
+  padding-left: 42.5%;
 }
 
 .login-btn {
