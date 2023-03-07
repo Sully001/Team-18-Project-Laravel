@@ -26,7 +26,7 @@
     <div class="navbar">
         <ul>
             <div class="nav-logo" id="nav-logo">
-                <a href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt style="width:15vw; height:9vh;"></a></img>
+                <a href="{{ route('welcome') }}"><img src="/images/Bambi-Shoes-Logo-Text-only-1.png" alt="" ></a></img>
             </div>
             <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li>
             <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
