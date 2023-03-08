@@ -36,8 +36,8 @@ color: #5e4b05;
 .new-in-contain {
     display: flex;
     background-color: white;
-    padding: 50px;
-    padding-top: 10px;
+    padding: 5%;
+    padding-top: 2%;
 }
 
 .new-in {
@@ -55,12 +55,19 @@ color: #5e4b05;
     align-items: center;
     padding: 0.5em;
     padding-bottom: 3.4em;
-    left: 14%;
+    left: 13%;
     bottom: 20%;
     border-radius: 50px;
     margin-right: 50px;
     margin-left: 25px;
    }
+
+.card img {
+    width: 180px; 
+    height: 95%; 
+    padding-top: 5px; 
+    border-radius: 30px;
+}   
 
 .card .title {
     font-size: 0.9em;
@@ -101,26 +108,25 @@ color: #5e4b05;
 
 .reviews {
     width: 100%;
-    height: 50px;
-    padding: 10px 20px;
+    padding: 0.5% 1%;
     background-color: #FFC14D;
   }
 
 .reviews h2 {
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 1%;
 }
 
 .reviews-contain {
     display: flex;
     background-color: #FFC14D;
-    padding: 50px;
+    padding: 2%;
 }
 
 .review-card {
-    width: 190px;
+    width: 13%;
     height: 300px;
-    left: 13%;
+    left: 14%;
     border-radius: 20px;
     background: #FFF6D3;
     position: relative;

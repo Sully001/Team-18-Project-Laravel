@@ -36,6 +36,10 @@
   padding: 2px 15px;
 }
 
+.login-btn:hover {
+  color:#5e4b05;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
