@@ -23,40 +23,32 @@ use App\Http\Controllers\RegisterController;
 |
 */
 // lots of routes that require auth middleware
-Route::group(['middleware' => 'auth'], function() {
-    //POST logout
-    Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
-    //Basket routes
-    Route::delete('/basket/remove', [BasketController::class, 'destroy'])->name('basket.remove');
-    Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
-    Route::post('/basket', [BasketController::class, 'store'])->name('basket.store');
+//POST logout
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
-    //Order routes
-    Route::post('/order', [OrderController::class, 'checkout'])->name('checkout');
-    Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+//Basket routes
+Route::delete('/basket/remove', [BasketController::class, 'destroy'])->name('basket.remove');
+Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
+Route::post('/basket', [BasketController::class, 'store'])->name('basket.store');
 
-    //Order Detail Routes
-    Route::get('/order/{id}', [PreviousOrderController::class, 'index'])->name('previous.orders');
-});
+//Order routes
+Route::post('/order', [OrderController::class, 'checkout'])->name('checkout');
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
-Route::group(['middleware' => 'guest'], function() {
-    //Login route
-    Route::post('login', [LoginController::class, 'store'])->name('signin');
-    //Gets login page
-    Route::get('/loginpage', [RegisterController::class, 'index'])->name('login');
-    //Register route
-    Route::post('/register', [RegisterController::class, 'store'])->name('register');
-});
+//Order Detail Routes
+Route::get('/order/{id}', [PreviousOrderController::class, 'index'])->name('previous.orders');
 
-Route::group(['middleware' => 'reject'], function() {
-    //Login route
-    Route::get('/logout')->name('logout');
-    Route::get('/basket')->name('basket.store');
-    Route::post('/order')->name('checkout');
-});
 
-//Global Middlewares
+//Login route
+Route::post('login', [LoginController::class, 'store'])->name('signin');
+//Gets login page
+Route::get('/loginpage', [RegisterController::class, 'index'])->name('login');
+//Register route
+Route::post('/register', [RegisterController::class, 'store'])->name('register');
+
+
+//Global Routes
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 
 //Route for all products
