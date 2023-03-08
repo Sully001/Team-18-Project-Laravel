@@ -31,7 +31,8 @@ class RegisterController extends Controller
         ]);
 
         auth()->attempt($request->only('email', 'password'));
-
+        //Set user id in session
+        session(['id' => auth()->user()->id]);
 
         return redirect()->route('welcome');
     }

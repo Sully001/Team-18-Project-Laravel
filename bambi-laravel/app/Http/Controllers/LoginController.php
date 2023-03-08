@@ -15,7 +15,8 @@ class LoginController extends Controller
         if (!auth()->attempt($request->only('email', 'password'))) {
             return back()->with('status', 'Invalid Login Details');
         }
-        
+        //Set user id in session
+        session(['id' => auth()->user()->id]);
 
         return redirect()->route('welcome');
     }
