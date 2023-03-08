@@ -11,9 +11,9 @@ class ProductController extends Controller
     //Method to get all products. Checks if sort has been requested
     public function index(Request $request) {
        if ($request->exists('sort')) {
-            $products = Product::orderBy('product_price', $request->query('sort'))->get();
+            $products = Product::orderBy('product_price', $request->query('sort'))->paginate(16);
        } else {
-            $products = Product::all();
+            $products = Product::paginate(16);;
        }
         return view('shop', [
             'products' => $products,
@@ -34,9 +34,9 @@ class ProductController extends Controller
     //Gets all mens products and checks if sorting has been requested
     public function shopMen(Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('product_gender', '=', 'Men')->orderBy('product_price', $request->query('sort'))->get();
+            $products = Product::where('product_gender', '=', 'Men')->orderBy('product_price', $request->query('sort'))->paginate(16);
        } else {
-            $products = Product::where('product_gender', '=', 'Men')->get();
+            $products = Product::where('product_gender', '=', 'Men')->paginate(16);
        }
         return view('shop', [
             'products' => $products,
@@ -46,9 +46,9 @@ class ProductController extends Controller
     //Gets all womens products and checks if sorting has been requested
     public function shopWomen(Request $request) {
         if ($request->exists('sort')) {
-            $products = Product::where('product_gender', '=', 'Women')->orderBy('product_price', $request->query('sort'))->get();
+            $products = Product::where('product_gender', '=', 'Women')->orderBy('product_price', $request->query('sort'))->paginate(16);
        } else {
-            $products = Product::where('product_gender', '=', 'Women')->get();
+            $products = Product::where('product_gender', '=', 'Women')->paginate(16);
        }
         return view('shop', [
             'products' => $products,
