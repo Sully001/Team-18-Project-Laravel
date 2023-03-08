@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PreviousOrderController;
 use App\Http\Controllers\ProductController;
@@ -27,16 +28,16 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
     //Basket routes
-    Route::delete('/basket/remove', [BasketController::class, 'destroy'])->name('basket.remove')->middleware('checkId');
-    Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket')->middleware('checkId');
-    Route::post('/basket', [BasketController::class, 'store'])->name('basket.store')->middleware('checkId');
+    Route::delete('/basket/remove', [BasketController::class, 'destroy'])->name('basket.remove');
+    Route::get('/basket/{id}', [BasketController::class, 'index'])->name('basket');
+    Route::post('/basket', [BasketController::class, 'store'])->name('basket.store');
 
     //Order routes
-    Route::post('/order', [OrderController::class, 'checkout'])->name('checkout')->middleware('checkId');
-    Route::get('/orders', [OrderController::class, 'index'])->name('orders')->middleware('checkId');
+    Route::post('/order', [OrderController::class, 'checkout'])->name('checkout');
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
     //Order Detail Routes
-    Route::get('/order/{id}', [PreviousOrderController::class, 'index'])->name('previous.orders')->middleware('checkId');
+    Route::get('/order/{id}', [PreviousOrderController::class, 'index'])->name('previous.orders');
 });
 
 Route::group(['middleware' => 'guest'], function() {
@@ -77,5 +78,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-
+Route::get('/mail', [MailController::class, 'sendMail']);
 
