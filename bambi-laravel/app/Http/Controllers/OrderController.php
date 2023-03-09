@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
+use App\Models\Size;
+use App\Mail\Ordered;
 use App\Models\Order;
 use App\Models\Basket;
+use App\Models\Product;
 use App\Models\OrderDetail;
-use App\Models\Size;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
     public function checkout(Request $request) {
+        $orderEmail = [];
         $userid = auth()->user()->id;
         $items = Basket::where('user_id', $userid)->get();
 
@@ -48,10 +52,25 @@ class OrderController extends Controller
             Size::where('product_id', $item->product_id)
             ->where('product_size', $item->size)
             ->update(['product_stock' => $stock ]);
+
+            //Gather data to be sent via the users email
+            $product = Product::findorFail($item->product_id);
+            $name = $product->product_name;
+            array_push($orderEmail, [
+                'name' => $name,
+                'size' => $item->size,
+                'quantity' => $item->quantity 
+            ]);
         }
 
         //Delete all users items from basket
         Basket::where('user_id', $userid)->delete();
+        try {
+            Mail::to(auth()->user()->email)->queue(new Ordered($orderEmail, $request->total));
+        } catch (Exception $exception) {
+            error_log("Couldn't send register email");
+        }
+        
         return view('checkout');
     }
 
