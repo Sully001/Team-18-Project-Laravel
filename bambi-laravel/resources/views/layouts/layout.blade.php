@@ -50,7 +50,7 @@
                 @csrf
                 <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li>
             </form>
-                <li class="li-right">Logged in: {{ auth()->user()->first_name }} {{auth()->user()->last_name}}</li> 
+                <li class="li-right" id="logged-user">Logged in: {{ auth()->user()->first_name }} {{auth()->user()->last_name}}</li> 
             @endauth
         </ul>
     </div>
