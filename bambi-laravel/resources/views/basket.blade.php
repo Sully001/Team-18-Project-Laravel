@@ -19,7 +19,7 @@
     
   <p>Total: £{{ $total }}</p>
 
-  <form action="{{ route('checkout')}}" method="POST"> 
+  <form action="{{route('checkout')}}" method="POST"> 
     @csrf    
     <input type="hidden" name="total" value="{{ $total }}">
     <button type="submit">Checkout</button>

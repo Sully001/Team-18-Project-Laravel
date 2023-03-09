@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Mail\Register;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -34,6 +37,13 @@ class RegisterController extends Controller
         //Set user id in session
         session(['id' => auth()->user()->id]);
 
+        try {
+            Mail::to($request->email)->queue(new Register($request->first_name, $request->last_name));
+        } catch (Exception $exception) {
+            error_log("Couldn't send register email");
+        }
+        
+        
         return redirect()->route('welcome');
     }
 }
