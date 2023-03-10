@@ -33,10 +33,97 @@
 .product_sect{
   margin-top: 40px;
   display: inline-block;
-  width: 900px;
-  height: 10px;
+  width: 480px;
+  height: 400px;
+  margin-left: 50px;
+  margin-bottom: 400px;
 }
 
 .shoe_img{
+  float: left;
+  margin-top: -130px;
+  margin-left: 120px;
+}
+
+#title{
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#desc{
+  margin-top: 20px;
+  width: 480px;
+  font-size: smaller;
+  letter-spacing: -0.2px;
+}
+
+.size_select{
+  margin-top: 20px;
+}
+
+#size_caption{
+  font-weight: bold;
+  margin-bottom: 15px;
   display: inline-block;
+}
+
+#price{
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+#basket_button{
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+}
+
+#atb_text{
+  margin-top: 9px;
+  letter-spacing: 0.4px;
+}
+
+.quantity_sect{
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.label{
+  border: none;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+input{
+  accent-color:#B39836;
+}
+
+#basket_button{
+  border: none;
+  border-radius: 25px;
+  background-color: #B39836;
+  color: white;
+  font-weight: bold;
+  font-size: smaller;
+  margin-top: 40px;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+#basket_button:hover{
+  background-color: #ddbc44;
+}
+
+#line_style{
+  margin-top: 20px;
+  width: 480px;
+  margin-left: -5px;
+  color: rgb(188, 188, 188);
+}
+
+#select_box{
+  margin-left: 15px;
+}
+
+.size_buttons{
+  margin-left: 15px;
 }
