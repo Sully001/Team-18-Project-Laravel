@@ -11,24 +11,55 @@
     <button type="button" onclick=window.location.href="{{ route('products.index') }}" class="login-btn">SHOP NOW</button>
 </div>
 
-<div class="new-in" style="padding-top:15px;">
-    <h2>New In</h2>
-</div>
 
 <div class="new-in-contain">
-    
-    <!-- $products is the value passed in from the HomeController.php. This is currently a list of all products from the products table-->
-    @foreach ($products as $product)
-        <!-- Only loop 4 times as we only want to show the first 4 items -->
-        @if ($loop->index < 4)
-        <div class="card" style="background-color: #FFF6D3; border-radius: 40px; height: 300px;">
-            <img src="/images/{{ $product->product_image}}" alt="Shoes" >
-            <h2 class="title" style="padding: 2px;">{{ $product->product_name }}</h2>
-            <span class="price">£{{ $product->product_price }}</span>
-            <button class="review-button" onclick=window.location.href="{{ route('products.index') }}">Quick View</button>
-        </div>
-        @endif
-    @endforeach
+
+    <div class="new-in">
+        <h2>New In</h2>
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Looping through list of products provided from web.php -->
+                        @foreach($products as $product)
+                        @php
+                        $i = $loop->iteration%4;
+                        @endphp
+                        <!-- This line unconditionally adds an image with appropriate text -->
+                        <div class="col text-center card" style="background-color: #FFF6D3; border-radius: 40px; height: 300px;">
+                            <!-- Fetches images from shop.blade and formats them into carousel  -->
+                                <img src="/images/{{ $product->product_image}}" alt="Shoes" >
+                                <h2 class="title">{{ $product->product_name }}</h2>
+                                <span class="price">£{{ $product->product_price }}</span>
+                                <button class="review-button" onclick=window.location.href="{{ route('products.show', $product->product_id) }}">Quick View</button>
+                        </div>
+                        <!-- If index i is a multiple of 4, close the slide! -->
+                        @if($i==0)
+                    </div>
+                </div>
+
+                @endif
+                <!-- If index i is a multiple of 4 & we are not at the 12th image, create a new slide (loops back to top) -->
+                @if($i==0 AND !$loop->last)
+                <div class="carousel-item">
+                    <div class="row">
+                        @endif
+
+
+                        @endforeach
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden"></span>
+                    </button>
+                </div>
+            </div>
 
 </div>
 

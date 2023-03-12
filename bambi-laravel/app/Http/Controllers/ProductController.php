@@ -31,6 +31,13 @@ class ProductController extends Controller
         ]);
     }
 
+    public function listCarouselProducts()
+    {
+        //Method created to get data from the 'product' table and to show them on the products view in carousel.
+        $products = Product::skip(0)->take(12)->get();
+        return $products;
+    }
+
     //Gets all mens products and checks if sorting has been requested
     public function shopMen(Request $request) {
         if ($request->exists('sort')) {

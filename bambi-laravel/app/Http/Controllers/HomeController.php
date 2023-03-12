@@ -11,7 +11,8 @@ class HomeController extends Controller
 {
     public function index () {
         //gets a list of all products from the products table and stores them in $products
-        $products = Product::all();
+        //limits number of products fetched to 12 for carousel
+        $products = Product::skip(0)->take(12)->get();
 
 
         //returns the page to navigate to
