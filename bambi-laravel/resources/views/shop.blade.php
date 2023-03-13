@@ -1,23 +1,4 @@
-@extends('layouts.layout')
-
-@section('css')
-  <link rel="stylesheet" href="/css/shop.css">
-@endsection
-
-@section('content')
-  <h1>Welcome To the Shop Page</h1>
-
-  <a href="{{ route('products.index')}}">All Products</a>
-  <a href="{{ route('products.men')}}">Men</a>
-  <a href="{{ route('products.women')}}">Women</a>
-
-  <br><br>
-
-  <a href="{{ URL::current()."?sort=desc" }}">Price - High To Low</a>
-  <a href="{{ URL::current()."?sort=asc" }}">Price - Low To High</a>
-
-  <br><br>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -72,120 +53,31 @@
             <h1 class="title">Shop All Shoes</h1>
             <div class="flex-row flex">
               <div class="items-container-3">
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-              </div>
-              <div class="items-container-2 items-container-3">
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-              </div>
-              <div class="items-container items-2">
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-              </div>
-              <div class="items-container items-2">
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
-                <article class="items items-2">
-                  <div class="rectangle"></div>
-                  <div class="place valign-text-middle montserrat-semi-bold-black-20px">Brand</div>
-                  <div class="model valign-text-middle montserrat-normal-black-15px">Model</div>
-                  <div class="surname valign-text-middle montserrat-semi-bold-black-15px">Price</div>
-                  <div class="button button-3">
-                    <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
-                  </div>
-                </article>
+
+
+                @foreach ($products as $product)
+
+                  <article class="items items-2">
+                    <div class="rectangle"></div>
+                    <div class="place valign-text-middle montserrat-semi-bold-black-20px">{{ $product->product_brand }}</div>
+                    <div class="model valign-text-middle montserrat-normal-black-15px">{{ $product->product_name }}</div>
+                    <div class="surname valign-text-middle montserrat-semi-bold-black-15px">£{{ $product->product_price }}</div>
+                    
+                    <a href="{{ route('products.show', $product->product_id) }}">
+                    
+                      <div class="button button-3">
+                        <div class="log-in-1 valign-text-middle montserrat-bold-white-15px">View Item</div>
+                      </div>
+
+                    </a>
+
+                  </article>
+
+                
+
+                @endforeach
+
+
               </div>
             </div>
           </div>
@@ -222,18 +114,3 @@
     </div>
   </body>
 </html>
-
-  <div class="flex-container">
-      @foreach ($products as $product)
-          <a href="{{ route('products.show', $product->product_id) }}">
-              <div class="product">
-                  <img src="/images/{{ $product->product_image}}" alt="Shoes" width="140px" height="140px">
-                  <p>{{ $product->product_brand }}</p>
-                  <p>{{ $product->product_name }}</p>
-                  <p>£{{ $product->product_price }}</p>
-              </div>
-          </a>
-      @endforeach
-  </div>
-  {{ $products->links() }}
-@endsection
