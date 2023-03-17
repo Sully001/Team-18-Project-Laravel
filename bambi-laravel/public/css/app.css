@@ -147,6 +147,10 @@ hr {
   padding: 0 50px;
 }
 
+#footer-logout {
+  margin-top: 44%;
+}
+
 .social {
   display:flex;
   color: black;

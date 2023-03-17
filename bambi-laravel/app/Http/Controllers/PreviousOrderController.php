@@ -13,8 +13,6 @@ class PreviousOrderController extends Controller
         //Grab all rows part of the same order
         $orderItems = OrderDetail::where('order_id', $id)->get();
         $order = Order::where('order_id', $id)->get();
-        dd($order[0]['created_at']);
-        // dd($order);
 
         
         //Grab total price of the order

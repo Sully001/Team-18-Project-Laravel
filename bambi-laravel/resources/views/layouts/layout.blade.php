@@ -26,7 +26,7 @@
     <div class="navbar">
         <ul>
             <div class="subnav">
-                <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li>
+                <!-- <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li> -->
                 <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
                 <li><a class="li" href="/about">About Us</a></li>
                 <li><a class="li" href="/contact">Contact Us</a></li>
@@ -50,7 +50,7 @@
                 @csrf
                 <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li>
             </form>
-                <li class="li-right" id="logged-user">Logged in: {{ auth()->user()->first_name }} {{auth()->user()->last_name}}</li> 
+                <li class="li-right" id="logged-user">Hello, {{ auth()->user()->first_name }}</li> 
             @endauth
         </ul>
     </div>
@@ -63,12 +63,27 @@
             <div class="footer-logo" id="foot-content-box">
                 <a href="/" class="logo"><img src="/images/Bambi_Shoes_Logo_no-bg.png" alt="" /></a>
             </div>
+
+            @if (Auth::check())
+            <div class="footer-links" id="foot-content-box">
+                    <a class="active" href="/shop">Shop</a><br>
+                    <a href="/about">About Us</a><br>
+                    <a href="/contact">Contact Us</a><br>
+                @auth
+                <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                    <button type="submit" id="footer-logout" class="login-btn li-right">Log Out</button>
+                </form>
+                @endauth
+            </div>
+            @else
             <div class="footer-links" id="foot-content-box">
                 <a class="active" href="/shop">Shop</a><br>
                 <a href="/about">About Us</a><br>
                 <a href="/contact">Contact Us</a><br>
                 <button type="button" onclick=window.location.href="{{ route('login') }}" class="login-foot li-right">Log In</button>
             </div>
+            @endif
         </div>
         <hr>
         <div class="footer-bottom">
