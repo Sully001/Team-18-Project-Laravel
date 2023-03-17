@@ -65,7 +65,7 @@
 
               @foreach ($products as $product)
 
-
+ ,
 
               @if($prod_counter == 0)
 
