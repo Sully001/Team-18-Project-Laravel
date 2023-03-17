@@ -11,7 +11,7 @@
   <h1>Order Details</h1> 
 </div>
 
-    <table>
+    <!-- <table>
         <tr>
             <th>Product Image</th>
             <th>Product Name</th>
@@ -19,7 +19,7 @@
             <th>Product Size</th>
             <th>Quantity</th>
             <th>Subtotal</th>
-        </tr>
+        </tr> -->
         <!-- @foreach ($items as $item) -->
 
         <!-- <tr>
@@ -30,7 +30,7 @@
             <td>{{ $item['quantity']}}</td>
             <td>£{{$item['itemTotal']}}</td>
         </tr> -->
-
+    
     <div class="container-fluid my-5  d-flex  justify-content-center">
         <div class="card card-1" style="width: 65%;">
             <div class="card-header bg-white">
@@ -42,7 +42,7 @@
             <div class="card-body">
                 <div class="row justify-content-between mb-3">
                     <div class="col-auto"> <h6 class="color-1 mb-0 change-color">Order Details</h6></div>
-                    <div class="col-auto"> <small>Receipt Voucher : 1KAU9-84UIL</small></div>
+                    <div class="col-auto"> <small>Order No : {{ $loop->index + 1 }}</small></div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -66,7 +66,7 @@
                                     <div class="col-md-3 mb-3"><small>Order Status<span><i class=" ml-2 fa fa-refresh" aria-hidden="true"></i></span></small> </div>
                                     <div class="col mt-auto">
                                         <div class="progress my-auto"> <div class="progress-bar progress-bar  rounded" style="width: 62%" role="progressbar" aria-valuenow="25" aria-valuemin="0"  aria-valuemax="100"></div> </div>
-                                        <div class="media row justify-content-between ">
+                                        <div class="media row justify-content-end ">
                                             <div class="col-auto text-right"><span> <small  class="text-right mr-sm-2"></small><i class="fa fa-circle active"></i> </span></div>
                                             <div class="flex-col"> <span> <small class="text-right mr-sm-2">Out for delivery</small><i class="fa fa-circle active"></i></span></div>
                                             <div class="col-auto flex-col-auto"><small  class="text-right mr-sm-2">Delivered</small><span><i class="fa fa-circle"></i></span></div>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="row invoice">
-                    <div class="col" id="od-row"><p class="mb-1">Order Number: 788152</p><p class="mb-1">Order Date & Time: 16th March 2023</p></div>
+                    <div class="col" id="od-row"><p class="mb-1">Order Number: {{ $loop->index + 1 }}</p><p class="mb-1">Order Date & Time: 16th March 2023</p></div>
                 </div>
             </div>
             <div class="card-footer">
@@ -101,13 +101,8 @@
                     <div class="row justify-content-around ">
                         <div class="col-sm-auto col-auto my-auto"><img class="img-fluid my-auto align-self-center " src="/images/Bambi-Shoes-Logo-Text-only-1.png"></div>
                         <div class="col-auto my-auto" style="margin-left: 21%"><h2 class="mb-0 font-weight-bold">Subtotal:</h2></div>
-                        <div class="col-auto my-auto ml-auto"><h1 class="display-3 ">£{{ $orderTotal }}</h1></div>
+                        <div class="col-auto my-auto ml-auto"><h1 class="display-3" style="font-size: 3rem;">£{{ $orderTotal }}</h1></div>
                     </div>
-                    <!-- <div class="row mb-3 mt-3 mt-md-0">
-                        <div class="col-auto border-line"> <small class="text-white">PAN:AA02hDW7E</small></div>
-                        <div class="col-auto border-line"> <small class="text-white">CIN:UMMC20PTC </small></div>
-                        <div class="col-auto "><small class="text-white">GSTN:268FD07EXX </small> </div>
-                    </div> -->
                 </div>
             </div>
         </div>

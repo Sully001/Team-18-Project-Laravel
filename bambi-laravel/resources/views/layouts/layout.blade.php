@@ -26,7 +26,7 @@
     <div class="navbar">
         <ul>
             <div class="subnav">
-                <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li>
+                <!-- <li><a class="active li" href="{{ route('welcome') }}">Welcome</a></li> -->
                 <li><a class="active li" href="{{ route('products.index') }}">Shop</a></li>
                 <li><a class="li" href="/about">About Us</a></li>
                 <li><a class="li" href="/contact">Contact Us</a></li>
@@ -50,7 +50,7 @@
                 @csrf
                 <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li>
             </form>
-                <li class="li-right" id="logged-user">Logged in: {{ auth()->user()->first_name }} {{auth()->user()->last_name}}</li> 
+                <li class="li-right" id="logged-user">Hello, {{ auth()->user()->first_name }}</li> 
             @endauth
         </ul>
     </div>
