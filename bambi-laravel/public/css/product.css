@@ -21,7 +21,7 @@
   #size-11:checked ~ .label-8,
   #size-12:checked ~ .label-9,
   #size-13:checked ~ .label-10 {
-    background-color: #0069D9;
+    background-color: #B39836;
   }
   
   form {
@@ -126,4 +126,18 @@ input{
 
 .size_buttons{
   margin-left: 15px;
+}
+
+.tooltip-inner {
+  background-color: #B39836 !important; /* Set box color to red */
+  color: white !important; /* Set text color to black */
+}
+
+
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before {
+  border-bottom-color: #B39836 !important; /* Set arrow color to red */
+}
+
+.alert {
+  margin: 10px;
 }

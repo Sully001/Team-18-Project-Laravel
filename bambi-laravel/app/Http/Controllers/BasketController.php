@@ -38,6 +38,12 @@ class BasketController extends Controller
     }
 
     public function store(Request $request) {
+        //Check if a size has been added/chosen
+        $request->validate([
+            'size' => 'required|string'
+        ], [
+            'size.required' => 'Please choose a size.'
+        ]);
         //Get the actual item from the database
         $user_id = auth()->user()->id;
 

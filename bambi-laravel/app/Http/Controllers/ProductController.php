@@ -23,10 +23,12 @@ class ProductController extends Controller
     //Retrieves a single product
     public function show($id) {
         $product = Product::findorFail($id);
+        $sizes = Size::where('product_id', $id)->get();
         //Grabs all sizes and their stock levels for each size
         //$sizes = Size::where('product_id', '=', $id)->get();
         return view('product', [
             'product' => $product,
+            'sizes' => $sizes,
             //'sizes' => $sizes,
         ]);
     }
