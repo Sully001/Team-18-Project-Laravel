@@ -30,12 +30,32 @@
       <h1 class = "bold_heading">Contact Us</h1>
       <p class = "subheading">For any enquiries, please contact us.</p>
     </div>
-    <div id = "form">
-      <input class = input_fields type="text" placeholder="First Name"><br>
-      <input class = input_fields type="text" placeholder="Last Name"><br>
-      <input class = input_fields type="text" placeholder="Email address"><br>
-      <textarea id = "message_box" class = input_fields type="text" placeholder="Your message"></textarea><br>
-      <button class = "submit_button" type="button">Submit</button>
+    <div id="form">
+      <form action="{{ route('contact.email') }}" method="POST">
+        @csrf
+        <input class="input_fields" name="firstName" type="text" placeholder="First Name"><br>
+        @error('firstName')
+            <p class="error">{{ $message }}</p>
+        @enderror
+        <input class="input_fields" name="lastName" type="text" placeholder="Last Name"><br>
+        @error('lastName')
+            <p class="error">{{ $message }}</p>
+        @enderror
+        <input class="input_fields" name="email" type="text" placeholder="Email address"><br>
+        @error('email')
+            <p class="error">{{ $message }}</p>
+        @enderror
+        <textarea id="message_box" name="message" class = input_fields type="text" placeholder="Your message"></textarea><br>
+        @error('message')
+            <p class="error">{{ $message }}</p>
+        @enderror
+        <button class="submit_button" type="submit">Submit</button>
+      </form>
+      @If(session('sent'))
+        <div class="alert alert-success" role="alert">
+          {{session('sent')}}
+        </div>
+      @endif
     </div>
   </div>
 </div>
