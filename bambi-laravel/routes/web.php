@@ -71,4 +71,5 @@ Route::get('/contact', function () {
 });
 
 Route::get('/mail', [MailController::class, 'sendMail']);
+Route::post('/contact/email', [HomeController::class, 'contactUs'])->name('contact.email');
 

@@ -13,7 +13,7 @@
     @enderror
 
     @if (session('add'))
-      <div class="alert alert-warning" role="alert">
+      <div class="alert alert-success" role="alert">
         <p>{{ session('add') }}: <a href="{{ route('basket', auth()->user()->id) }}">Want to view your basket?</a>
       </div>
     @endif
