@@ -99,6 +99,12 @@
   width: 469px;
 }
 
+.shop .prod_box {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
 .shop .overlap-group {
   align-items: flex-start;
   background-color: #d9d9d9;
