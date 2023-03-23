@@ -222,6 +222,14 @@
   width: 250px;
 }
 
+.shop .rectangle img {
+  width: 95%; 
+  height: 95%; 
+  padding-top: 1%; 
+  border-radius: 10%;
+}  
+
+
 .shop .place {
   height: 24px;
   letter-spacing: -0.30px;
