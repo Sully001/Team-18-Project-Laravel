@@ -8,6 +8,14 @@
   width: 1920px;
 }
 
+
+.grid-container {
+
+  display: grid;
+}
+
+
+
 .shop .bambi-shoes-logo-text {
   height: 60px;
   margin-left: 327px;
