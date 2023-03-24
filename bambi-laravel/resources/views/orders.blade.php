@@ -24,7 +24,7 @@
         <p>£{{ $order->total }}</p> 
       </div>
       <div class="view-order"> 
-        <p><a href="{{ route('previous.orders',$order->order_id) }}">
+        <p><a href="/order/{{$order->order_id}}">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a></p>
       </div>
