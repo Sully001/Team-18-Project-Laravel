@@ -17,6 +17,11 @@
         <p>{{ session('add') }}: <a href="{{ route('basket', auth()->user()->id) }}">Want to view your basket?</a>
       </div>
     @endif
+    @if (session('stock'))
+      <div class="alert alert-warning" role="alert">
+        <p>{{ session('stock') }}</p>
+      </div>
+    @endif
 
     <div class = "shoe_img">
       <img src="/images/{{ $product->product_image }}" alt="Shoes" height="500px" width="500px">
