@@ -1,5 +1,11 @@
 /* Formatting image with logo and button */
 
+.homepage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+  
 .homepage img {
     width: 100%;
     height: 80%;
@@ -7,21 +13,22 @@
 
 .homepage .login-btn {
     position: absolute;
-    top: 95%;
+    top: 80%;
     left: 50%;
-    right: 41%;
+    width: 15%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background: #B39836;
-    border-radius: 6px;
+    background-color: #B39836;
+    color: white;
     font-weight: bold;
-    border-color: transparent;
-    color: #FFFFFF;
-    padding: 2px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
   }
 
 .homepage .login-btn:hover {
-color: #5e4b05;
+    color: #5e4b05;
 }
 
 /* "New In" products section with carousel*/
@@ -32,9 +39,9 @@ color: #5e4b05;
 }
 
 .new-in {
-  width: 100%;
-  height: 2%;
-  padding: 0.5% 1%;
+    width: 100%;
+    height: 2%;
+    padding: 0.5% 1%;
 }
 
 .new-in h2 {
@@ -51,7 +58,7 @@ color: #5e4b05;
     border-radius: 50px;
     margin-right: 50px;
     margin-left: 25px;
-   }
+}
 
 .card img {
     width: 95%; 
@@ -100,6 +107,31 @@ color: #5e4b05;
 
 /* Reviews section */
 
+.reviews-contain {
+    /* display: flex; */
+    max-width: 100%;
+    background-color: #FFC14D;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1.2fr);
+    grid-template-rows: .8fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+   
+}
+
+@media screen and (max-width: 750px) {
+    .reviews-contain {
+        display: block;
+    }  
+
+    .review-1, .review-2, .review-3, .review-4 {
+       margin-top: 5%;
+       margin-bottom: 5%;
+    }
+}
+
 .reviews {
     width: 100%;
     padding: 0.5% 1%;
@@ -111,38 +143,45 @@ color: #5e4b05;
     margin-left: 1%;
 }
 
-.reviews-contain {
-    display: flex;
-    background-color: #FFC14D;
-    padding: 2%;
+.review-1 { 
+    grid-area: 1 / 1 / 2 / 2; 
 }
 
-.review-card {
-    width: 15%;
-    height: 300px;
-    left: 10%;
+.review-2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.review-3 { 
+    grid-area: 1 / 3 / 2 / 4; 
+}
+
+.review-4 { 
+    grid-area: 1 / 4 / 2 / 5; 
+}
+
+.review-1, .review-2, .review-3, .review-4 {
+    width: 50%;
+    left: 28%;
     border-radius: 20px;
     background: #FFF6D3;
     position: relative;
     padding: 1.8rem;
     transition: 0.5s ease-out;
-    margin-left: 50px;
-    margin-right: 30px;
    }
    
-   .review-details {
+.review-details {
     color: black;
     height: 100%;
     gap: .5em;
     display: grid;
     place-content: center;
-   }
+}
 
-   .review-title {
-     font-weight: bolder;
-   }
-   
-   .review-button {
+.review-title {
+    font-weight: bolder;
+}
+
+.review-button {
     transform: translate(-50%, 125%);
     width: 70%;
     border-radius: 1rem;
@@ -155,30 +194,32 @@ color: #5e4b05;
     bottom: 0;
     opacity: 0;
     transition: 0.3s ease-out;
-   }
-   
-   .text-body {
+}
+
+.text-body {
     color: rgb(134, 134, 134);
-   }
-   
-   /*Text*/
-   .text-title {
+}
+
+/*Text*/
+
+.text-title {
     font-size: 1.5em;
     font-weight: bold;
-   }
-   
-   /*Hover*/
-   .card:hover {
+}
+
+/*Hover*/
+
+.card:hover {
     border-color: #B39836;
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-   }
+}
 
-   .review-card:hover {
+.review-card:hover {
     border-color: #B39836;
     box-shadow: 0 4px 18px 0 #B39836;
-   }
-   
-   .card:hover .review-button {
+}
+
+.card:hover .review-button {
     transform: translate(-50%, 50%);
     opacity: 1;
-   }
+}

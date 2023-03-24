@@ -102,7 +102,24 @@ li a:hover {
 
 .footer-content #foot-content-box {
   width: 100%;
-  display: inherit;
+  display: flex;
+}
+
+@media screen and (max-width:800px) {
+  .footer-content #foot-content-box {
+    display: block;
+    /* padding-top: 5%; */
+  }
+
+  .footer-links {
+    padding-top: 8%;
+  }
+
+  .footer-links .login-btn .li-right {
+    /* top: 45%;
+    right: 12%; */
+    padding-right: 35%;
+  }
 }
 
 .footer .footer-content .footer-links a {
