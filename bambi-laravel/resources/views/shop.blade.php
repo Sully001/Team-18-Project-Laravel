@@ -14,7 +14,7 @@
     <div class="shop screen">
 
       <div class="hero">
-        <div class="flex-col flex">
+        <div class="flex-col  flex">
           <p class="receive-and-extra-sp montserrat-medium-black-32px">
             <span class="montserrat-medium-black-32px">Receive and extra special </span><span class="span1">free
               gift</span><span class="montserrat-medium-black-32px"> with your luxury shoes!</span>
