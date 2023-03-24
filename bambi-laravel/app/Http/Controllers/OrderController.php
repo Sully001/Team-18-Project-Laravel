@@ -76,6 +76,9 @@ class OrderController extends Controller
 
     public function index() {
         $orders = Order::where('user_id', auth()->user()->id)->get();
+        if(count($orders) == 0) {
+            return view('emptyorders');
+        }
         return view('orders', [
             'orders' => $orders
         ]);
