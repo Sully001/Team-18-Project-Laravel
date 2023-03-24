@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/orders', [OrderController::class, 'index'])->name('orders');
 
     //Order Detail Routes
-    Route::get('/order/{id}', [PreviousOrderController::class, 'index'])->name('previous.orders')->middleware(['checkId']);
+    Route::get('/order/{id}', [PreviousOrderController::class, 'index']);
 
     //Email Route for Register and Order Email Notif
     Route::get('/mail', [MailController::class, 'sendMail']);
