@@ -2,47 +2,66 @@
 
 @section('css')
   <link rel="stylesheet" href="/css/basket.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
 @endsection
 
 @section('content')
 
-  <h1>Basket Page</h1>  
+<div class = "all">
+  <div class = "first_section">
+    <h1 id = "basket_title">Your Basket</h1>  
+    <p id = "basket_caption">Continue shopping or head to checkout.</p>  
 
-  @if (session('empty'))
-      <p>{{ session('empty') }}</p>  
-  @endif
-  @if (session('delete'))
-      <p>{{ session('delete') }}</p>  
-  @endif
+    @if (session('empty'))
+        <p>{{ session('empty') }}</p>  
+    @endif
+    @if (session('delete'))
+        <p>{{ session('delete') }}</p>  
+    @endif
 
-  <p>Subtotal: £{{ $total }}</p>
-    
-  <p>Total: £{{ $total }}</p>
+      <div class = "checkout_box">
+        <h4 id = "order_summary">Order Summary</h4>
+        <div class = "total_info">
+          <p id = "subtotal">Subtotal - £{{ $total }}</p>
+          <hr id = "line_style">
+          <p id = "total">Order Total - £{{ $total }}</p>
+          <form action="{{route('checkout')}}" method="POST"> 
+            @csrf    
+            <input type="hidden" name="total" value="{{ $total }}">
+            <button type="submit" id = "checkout_button">Checkout</button>
+          </form>
+          <br>
+        </div>
+      </div>
 
-  <form action="{{route('checkout')}}" method="POST"> 
-    @csrf    
-    <input type="hidden" name="total" value="{{ $total }}">
-    <button type="submit">Checkout</button>
-  </form>
-  <br>
-
-  @foreach ($products as $product)
-    <img src="/images/{{ $product['image'] }}" alt="Shoes" height="140px" width="140px">
-      <p>Product ID: {{ $product['id'] }}</p>
-      <p>Product ID: {{ $product['brand'] }}</p>
-      <p>Product Name: {{ $product['name'] }}</p>
-      <p>Price: £{{ $product['price'] }}</p>  
-      <p>Shoe Size: {{ $product['size'] }}</p>
-      <p>Quantity: {{ $product['quantity'] }}</p>
-
-    <form action="{{ route('basket.remove') }}" method="POST">
-      @csrf
-      @method('DELETE')
-      <input type="hidden" name="id" value="{{ $product['id'] }}">
-      <input type="hidden" name="size" value="{{ $product['size'] }}">
-      <button class="btn btn-danger">Remove</button>
-    </form>
-    <br>
-  @endforeach
+      <div class = "item_sect">
+        @foreach ($products as $product)
+        <div class = "item_box">
+          <img id = "product_image" src="/images/{{ $product['image'] }}" alt="Shoes" height="160px" width="160px">
+          <div class = "product_info">
+              <h5 id = "product_title">{{ $product['brand'] }} {{ $product['name'] }}</h5> <button id = "remove_button" class="btn btn-danger">✕</button>
+              <hr id = "line_style_item">
+              <div class = "size_quantity">
+                <p id = "size">Size: {{ $product['size'] }}</p>
+                <p id = "quantity">Quantity: {{ $product['quantity'] }}</p>
+              </div>
+              <p id = "product_tag">£{{ $product['price'] }}</p>  
+          </div>
+            <form action="{{ route('basket.remove') }}" method="POST">
+              @csrf
+              @method('DELETE')
+              <input type="hidden" name="id" value="{{ $product['id'] }}">
+              <input type="hidden" name="size" value="{{ $product['size'] }}">
+            </form>
+        </div>
+          <br>
+        @endforeach
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
