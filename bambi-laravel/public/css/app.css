@@ -108,18 +108,18 @@ li a:hover {
 @media screen and (max-width:800px) {
   .footer-content #foot-content-box {
     display: block;
-    /* padding-top: 5%; */
   }
 
   .footer-links {
     padding-top: 8%;
   }
 
-  .footer-links .login-btn .li-right {
-    /* top: 45%;
-    right: 12%; */
-    padding-right: 35%;
+  .footer-links #footer-logout,
+  .footer-links #footer-login {
+    margin-top: 5%;
+    margin-right: 60%;
   }
+
 }
 
 .footer .footer-content .footer-links a {
