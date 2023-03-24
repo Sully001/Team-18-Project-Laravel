@@ -18,6 +18,7 @@
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Bambi</title>
+        <link rel="icon" type="image/x-icon" href="/images/Bambi_Shoes_Logo_no-bg.png">
 
     </head>
 
@@ -81,7 +82,7 @@
                 <a class="active" href="/shop">Shop</a><br>
                 <a href="/about">About Us</a><br>
                 <a href="/contact">Contact Us</a><br>
-                <button type="button" onclick=window.location.href="{{ route('login') }}" class="login-foot li-right">Log In</button>
+                <button type="button" id="footer-login" onclick=window.location.href="{{ route('login') }}" class="login-foot li-right">Log In</button>
             </div>
             @endif
         </div>

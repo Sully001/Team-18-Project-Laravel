@@ -28,7 +28,7 @@
                         $i = $loop->iteration%4;
                         @endphp
                         <!-- This line unconditionally adds an image with appropriate text -->
-                        <div class="col text-center card" style="background-color: #FFF6D3; border-radius: 40px; height: 300px;">
+                        <div class="col text-center card" id="carousel-card">
                             <!-- Fetches images from shop.blade and formats them into carousel  -->
                                 <img src="/images/{{ $product->product_image}}" alt="Shoes" >
                                 <h2 class="title">{{ $product->product_name }}</h2>
@@ -69,28 +69,28 @@
 
 <div class="reviews-contain">
 
-    <div class="review-card">
+    <div class="review-1">
     <div class="review-details">
         <p class="review-title">Mary P, Manchester</p>
         <p class="review-body">"Amazing shoes, at an outstanding quality. Would definitely shop here again!"</p>
     </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-2">
     <div class="review-details">
         <p class="review-title">John Doe, London</p>
         <p class="review-body">"Love them! Shoes are true to size and super comfortable!"</p>
     </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-3">
     <div class="review-details">
         <p class="review-title">Susan Hoffman, Isle of Wight</p>
         <p class="review-body">"Long-lasting wear, easy to maintain and quick to break in!"</p>
     </div>
     </div>
 
-    <div class="review-card">
+    <div class="review-4">
     <div class="review-details">
         <p class="review-title">Samantha Wilson, Bath</p>
         <p class="review-body">"I love how soft the material on the shoes are, they are the perfect fit!"</p>
