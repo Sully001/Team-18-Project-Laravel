@@ -9,7 +9,7 @@
 
 @section('content')
   <input type="hidden" id="anPageName" name="page" value="shop" />
-  <div class="container-center-horizontal">
+  <div class="container-center-horizontal flex">
       
     <div class="shop screen">
 
