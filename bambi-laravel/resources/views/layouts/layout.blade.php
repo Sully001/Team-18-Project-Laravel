@@ -34,7 +34,7 @@
                     <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket</a></li>
                     <li><a class="li" href="{{ route('orders')}}">Orders</a></li>
                 @else
-                    <li><a class="li" href="">Basket</a></li>
+                    <li><a class="li" href="{{ route('basket', 2000) }}">Basket</a></li>
                 @endif
             </div>
             <div class="nav-logo" id="nav-logo">
@@ -50,7 +50,7 @@
                 @csrf
                 <li><button type="submit" class="login-btn li-right"><a class="login-btn">Log Out</a></button></li>
             </form>
-                <li class="li-right" id="logged-user">Hello, {{ auth()->user()->first_name }}</li> 
+                <li class="li-right" id="logged-user">Hello, {{ session('firstName') }}</li> 
             @endauth
         </ul>
     </div>

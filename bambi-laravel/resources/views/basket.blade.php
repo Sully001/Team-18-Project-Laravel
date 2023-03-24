@@ -19,7 +19,9 @@
         <p>{{ session('empty') }}</p>  
     @endif
     @if (session('delete'))
-        <p>{{ session('delete') }}</p>  
+      <div class="alert alert-warning" role="alert">
+            <p>{{ session('delete') }}</p>
+        </div>
     @endif
 
       <div class = "checkout_box">
