@@ -31,7 +31,7 @@
 .shop .hero {
   align-items: center;
   background-color: var(--vis-vis);
-  box-shadow: 0px 4px 4px #00000040;
+  box-shadow: 0px 2px 2px #00000040;
   display: flex;
   gap: 340px;
   justify-content: flex-end;
@@ -51,6 +51,7 @@
   line-height: normal;
   min-height: 104px;
   width: 537px;
+  padding-left: 60%;
 }
 
 .shop .span1 {
@@ -71,6 +72,7 @@
   line-height: normal;
   min-height: 150px;
   width: 492px;
+  padding-left: 20%;
 }
 
 .shop .rectangle-15 {
@@ -96,7 +98,7 @@
   box-shadow: 0px 4px 4px #00000040;
   display: flex;
   flex-direction: column;
-  height: 2275px;
+  height: 100%;
   left: 0;
   padding: 46px 42px;
   position: absolute;
@@ -114,17 +116,15 @@
 .shop .prod_box {
   display: flex;
   flex-wrap: wrap;
-  padding: 5px;
-  margin: 5px;
-  align-items: center;
+  padding-left: 5%;
 }
 
 
 article {
-  padding: 5px;
-  margin : 45px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  padding: 0.5em;
+  margin : 0.45em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 
 
 }
@@ -217,7 +217,7 @@ article {
   gap: 40px;
   left: 468px;
   min-height: 1930px;
-  padding: 54px 0;
+  padding: 2.2% 0;
   position: absolute;
   display: flex;
   top: 0;
@@ -246,10 +246,11 @@ article {
   background-color: var(--vis-vis);
   border-radius: 50px;
   box-shadow: 0px 4px 4px #00000040;
-  height: 500px;
+  height: 20%;
   overflow: hidden;
   padding: 20px 0;
-  width: 300px;
+  margin: 2%;
+  width: 20%;
 }
 
 .shop .rectangle {
@@ -328,7 +329,7 @@ article {
 .shop .credit-hero {
   align-items: flex-start;
   background-color: #ffc14d;
-  box-shadow: 0px 4px 4px #00000040;
+  /* box-shadow: 0px 4px 4px #00000040; */
   display: flex;
   flex-direction: row;
   gap: 29px;
