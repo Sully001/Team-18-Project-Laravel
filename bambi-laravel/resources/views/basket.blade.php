@@ -7,12 +7,10 @@
 @section('content')
 
   <h1>Basket Page</h1>  
-
-  @if (session('empty'))
-      <p>{{ session('empty') }}</p>  
-  @endif
   @if (session('delete'))
-      <p>{{ session('delete') }}</p>  
+      <div class="alert alert-warning" role="alert">
+          <p>{{ session('delete') }}</p>
+      </div>
   @endif
 
   <p>Subtotal: £{{ $total }}</p>

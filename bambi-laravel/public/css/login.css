@@ -79,3 +79,7 @@
 .submit_button:hover{
     background-color: #ddbc44;
 }
+
+.alert {
+    margin: 10px;
+}

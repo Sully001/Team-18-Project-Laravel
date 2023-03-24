@@ -36,14 +36,12 @@ class RegisterController extends Controller
         auth()->attempt($request->only('email', 'password'));
         //Set user id in session
         session(['id' => auth()->user()->id]);
+        session(['firstName' => auth()->user()->first_name]);
 
         try {
             Mail::to($request->email)->queue(new Register($request->first_name, $request->last_name));
         } catch (Exception $exception) {
-            error_log("Couldn't send register email");
         }
-        
-        
         return redirect()->route('welcome');
     }
 }

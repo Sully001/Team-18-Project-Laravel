@@ -17,6 +17,7 @@ class LoginController extends Controller
         }
         //Set user id in session
         session(['id' => auth()->user()->id]);
+        session(['firstName' => auth()->user()->first_name]);
 
         return redirect()->route('welcome');
     }
