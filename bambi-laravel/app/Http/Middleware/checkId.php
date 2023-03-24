@@ -15,8 +15,7 @@ class checkId
      */
     public function handle(Request $request, Closure $next): Response
     {
-        
-        if($request->id == auth()->user()->id) {
+        if(session('id') == $request->id) {
             return $next($request);
         } else {
             return redirect()->back();
