@@ -35,7 +35,7 @@
 
 .new-in-contain {
     background-color: white;
-    padding-bottom: 3.5%;
+    padding-bottom: 3%;
 }
 
 .new-in {
@@ -49,44 +49,44 @@
     margin-left: 20px;
 }
 
-.card {
+#carousel-card {
     align-items: center;
     padding: 0.5em;
-    padding-bottom: 3.4em;
+    padding-bottom: 4.4em;
     left: 16%;
     bottom: 20%;
-    border-radius: 50px;
-    margin-right: 50px;
-    margin-left: 25px;
+    /* margin-right: 50px;
+    margin-left: 25px; */
+    margin: 2%;
+    background-color: #FFF6D3; 
+    border-radius: 14%; 
 }
 
-.card img {
+#carousel-card img {
     width: 95%; 
-    height: 95%; 
+    /* height: 95%;  */
     padding-top: 1%; 
     border-radius: 10%;
 }   
 
-.card .title {
+#carousel-card .title {
     font-size: 0.85em;
     position: absolute;
-    /* left: 0.625em; */
     bottom: 1.875em;
     font-weight: 400;
 }
 
-.card .price {
+#carousel-card .price {
     font-size: 0.85em;
     position: absolute;
-    left: 6.625em;
     bottom: 0.625em;
 }
 
-.card:hover::after {
+#carousel-card:hover::after {
     bottom: 0;
 }
 
-.card:active {
+#carousel-card:active {
     transform: scale(0.98);
 }
 
@@ -130,6 +130,9 @@
        margin-top: 5%;
        margin-bottom: 5%;
     }
+}
+
+@media screen and (max-width: 800px) {
 }
 
 .reviews {

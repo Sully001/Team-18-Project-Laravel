@@ -28,7 +28,7 @@
                         $i = $loop->iteration%4;
                         @endphp
                         <!-- This line unconditionally adds an image with appropriate text -->
-                        <div class="col text-center card" style="background-color: #FFF6D3; border-radius: 40px; height: 300px;">
+                        <div class="col text-center card" id="carousel-card">
                             <!-- Fetches images from shop.blade and formats them into carousel  -->
                                 <img src="/images/{{ $product->product_image}}" alt="Shoes" >
                                 <h2 class="title">{{ $product->product_name }}</h2>
