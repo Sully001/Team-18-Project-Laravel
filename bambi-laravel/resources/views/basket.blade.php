@@ -10,12 +10,7 @@
 
 @section('content')
 
-<div class = "all">
-  <div class = "first_section">
-    <h1 id = "basket_title">Your Basket</h1>  
-    <p id = "basket_caption">Continue shopping or head to checkout.</p>  
-
-    @if (session('empty'))
+@if (session('empty'))
         <p>{{ session('empty') }}</p>  
     @endif
     @if (session('delete'))
@@ -23,6 +18,11 @@
             <p>{{ session('delete') }}</p>
         </div>
     @endif
+
+<div class = "all">
+  <div class = "first_section">
+    <h1 id = "basket_title">Your Basket</h1>  
+    <p id = "basket_caption">Continue shopping or head to checkout.</p>  
 
       <div class = "checkout_box">
         <h4 id = "order_summary">Order Summary</h4>
@@ -44,7 +44,14 @@
         <div class = "item_box">
           <img id = "product_image" src="/images/{{ $product['image'] }}" alt="Shoes" height="160px" width="160px">
           <div class = "product_info">
-              <h5 id = "product_title">{{ $product['brand'] }} {{ $product['name'] }}</h5> <button id = "remove_button" class="btn btn-danger">✕</button>
+              <h5 id = "product_title">{{ $product['brand'] }} {{ $product['name'] }}</h5> 
+              <form action="{{ route('basket.remove') }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" id = "remove_button">✕</button>
+                <input type="hidden" name="id" value="{{ $product['id'] }}">
+                <input type="hidden" name="size" value="{{ $product['size'] }}">
+              </form>
               <hr id = "line_style_item">
               <div class = "size_quantity">
                 <p id = "size">Size: {{ $product['size'] }}</p>
@@ -52,12 +59,7 @@
               </div>
               <p id = "product_tag">£{{ $product['price'] }}</p>  
           </div>
-            <form action="{{ route('basket.remove') }}" method="POST">
-              @csrf
-              @method('DELETE')
-              <input type="hidden" name="id" value="{{ $product['id'] }}">
-              <input type="hidden" name="size" value="{{ $product['size'] }}">
-            </form>
+            
         </div>
           <br>
         @endforeach
