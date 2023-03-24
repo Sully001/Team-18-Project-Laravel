@@ -10,26 +10,6 @@
 <div id="od-heading">
   <h1>Order Details</h1> 
 </div>
-
-    <!-- <table>
-        <tr>
-            <th>Product Image</th>
-            <th>Product Name</th>
-            <th>Product Price</th>
-            <th>Product Size</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr> -->
-        <!-- @foreach ($items as $item) -->
-
-        <!-- <tr>
-            <td><img src="/images/{{ $item['image']}}" height="80px" width="80px"></td>
-            <td>{{ $item['name']}}</td>
-            <td>£{{ $item['price']}}</td>
-            <td>{{ $item['size']}}</td>
-            <td>{{ $item['quantity']}}</td>
-            <td>£{{$item['itemTotal']}}</td>
-        </tr> -->
     
     <div class="container-fluid my-5  d-flex  justify-content-center">
         <div class="card card-1" style="width: 65%;">
@@ -42,7 +22,7 @@
             <div class="card-body">
                 <div class="row justify-content-between mb-3">
                     <div class="col-auto"> <h6 class="color-1 mb-0 change-color">Order Details</h6></div>
-                    <div class="col-auto"> <small>Order No : {{ $loop->index + 1 }}</small></div>
+                    <!-- <div class="col-auto"> <small>Order No : 1</small></div> -->
                 </div>
                 <div class="row">
                     <div class="col">
@@ -68,8 +48,8 @@
                                         <div class="progress my-auto"> <div class="progress-bar progress-bar  rounded" style="width: 62%" role="progressbar" aria-valuenow="25" aria-valuemin="0"  aria-valuemax="100"></div> </div>
                                         <div class="media row justify-content-end ">
                                             <div class="col-auto text-right"><span> <small  class="text-right mr-sm-2"></small><i class="fa fa-circle active"></i> </span></div>
-                                            <div class="flex-col"> <span> <small class="text-right mr-sm-2">Out for delivery</small><i class="fa fa-circle active"></i></span></div>
-                                            <div class="col-auto flex-col-auto"><small  class="text-right mr-sm-2">Delivered</small><span><i class="fa fa-circle"></i></span></div>
+                                            <div class="flex-col"> <span> <small class="text-right mr-sm-2">Pending</small><i class="fa fa-circle active"></i></span></div>
+                                            <div class="col-auto flex-col-auto" id="delivered"><small class="text-right mr-sm-2">Delivered</small><span><i class="fa fa-circle"></i></span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -82,18 +62,18 @@
                 <div class="row mt-4">
                     <div class="col">
                         <div class="row justify-content-between">
-                            <div class="col-auto"><p class="mb-1 text-dark"><b>Order Details</b></p></div>
-                            <div class="flex-sm-col text-right col" id="total"> <p class="mb-1"><b>Total</b></p> </div>
-                            <div class="flex-sm-col col-auto"> <p class="mb-1">£{{$item['itemTotal']}}</p> </div>
+                            <!-- <div class="col-auto"><p class="mb-1 text-dark"><b>Order Details</b></p></div> -->
+                            <div class="flex-sm-col text-right col" id="total"> <p class="mb-1"><b>VAT:</b></p> </div>
+                            <div class="flex-sm-col col-auto"> <p class="mb-1">20%</p> </div>
                         </div>
                         <div class="row justify-content-between">
-                            <div class="flex-sm-col text-right col" id="delivery"><p class="mb-1"><b>Delivery</b></p></div>
+                            <div class="flex-sm-col text-right col" id="delivery"><p class="mb-1"><b>Delivery:</b></p></div>
                             <div class="flex-sm-col col-auto"><p class="mb-1">Free (Standard)</p></div>
                         </div>
                     </div>
                 </div>
                 <div class="row invoice">
-                    <div class="col" id="od-row"><p class="mb-1">Order Number: {{ $loop->index + 1 }}</p><p class="mb-1">Order Date & Time: 16th March 2023</p></div>
+                    <!-- <div class="col" id="od-row"><p class="mb-1">Order Number: 1</p><p class="mb-1">Order Date & Time: 16th March 2023</p></div> -->
                 </div>
             </div>
             <div class="card-footer">
@@ -107,17 +87,6 @@
             </div>
         </div>
     </div>
-
-
-        <!-- @endforeach -->
-        <!-- <tr>
-            <th scope="row" colspan="5">SubTotal</th>
-            <td><strong>£{{ $orderTotal }}</strong></td>
-        </tr>
-    </table> -->
-
-
-
 
 </div>
 @endsection
