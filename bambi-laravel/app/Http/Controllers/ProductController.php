@@ -13,7 +13,7 @@ class ProductController extends Controller
        if ($request->exists('sort')) {
             $products = Product::orderBy('product_price', $request->query('sort'))->paginate(16);
        } else {
-            $products = Product::paginate(16);;
+            $products = Product::inRandomOrder()->paginate(16);
        }
         return view('shop', [
             'products' => $products,
