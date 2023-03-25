@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600italic,700,500,600,400italic");
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600italic,700,500,600,400italic"); */
 
 .screen a {
   display: contents;
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: center;
 }
-
+/* 
 * {
   box-sizing: border-box;
 }
@@ -145,4 +145,4 @@
   line-height: normal;
   margin-bottom: 2.0px;
   text-align: center;
-}
+} */
