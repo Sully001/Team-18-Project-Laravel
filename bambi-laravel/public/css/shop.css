@@ -78,7 +78,7 @@
 .shop .rectangle-15 {
   height: 500px;
   object-fit: cover;
-  width: 962px;
+  width: 100%;
 }
 
 .shop .overlap-group2 {
@@ -119,6 +119,8 @@
   padding-left: 5%;
   height: 2050px;
   width: 1395px;
+  /* max-height: 100%;
+  max-width: 100%; */
 }
 
 
@@ -149,6 +151,7 @@ article {
   letter-spacing: -0.36px;
   line-height: normal;
   width: 252px;
+  /* width: 100%; */
 }
 
 .shop .overlap-group1 {
@@ -227,7 +230,7 @@ article {
   gap: 29px;
   /* min-height: 375px; */
   /* padding: 79px 136px; */
-  width: 100%;
+  max-width: 93%;
 }
 
 .shop .title {
