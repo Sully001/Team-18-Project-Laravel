@@ -230,7 +230,7 @@ article {
   gap: 29px;
   /* min-height: 375px; */
   /* padding: 79px 136px; */
-  max-width: 93%;
+  width: 93%;
 }
 
 .shop .title {
