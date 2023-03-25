@@ -63,4 +63,43 @@ class ProductController extends Controller
             'products' => $products,
         ]);
     }
+
+    public function shopWomenTrainers() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Trainers')->paginate(16);
+  
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenBoots() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Boots')->paginate(16);
+  
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenTrainers() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Trainers')->paginate(16);
+  
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+    public function shopMenLoafers() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Loafers')->paginate(16);
+  
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenBoots() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Boots')->paginate(16);
+  
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
 }
