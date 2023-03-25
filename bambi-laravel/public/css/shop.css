@@ -224,7 +224,10 @@ article {
   position: absolute;
   display: flex;
   top: 0;
-  width: 75%;
+  gap: 29px;
+  /* min-height: 375px; */
+  /* padding: 79px 136px; */
+  width: 100%;
 }
 
 .shop .title {
