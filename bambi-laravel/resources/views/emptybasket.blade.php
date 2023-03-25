@@ -15,7 +15,7 @@
         <p>You currently do not have any items in your basket.</p>
         <p>Browse our latest products to find the perfect new pair for your collection!</p>
         <br/>
-        <button type="button" class="login-btn" onclick=window.location.href="{{ route('products.index') }}">Continue Shopping</button>
+        <button type="button" class="login-btn" onclick=window.location.href="{{ route('products.index') }}">Start Browsing</button>
       </div>
   </div>
 
