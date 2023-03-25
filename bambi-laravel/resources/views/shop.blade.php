@@ -39,6 +39,7 @@
             <div class="search-1 valign-text-middle montserrat-normal-black-24px">
               <form action="{{route('search')}}">
                 <input type="Search" name="search" id="search" placeholder="Search by Brand or Name">
+                <!-- <button type="submit"><img src="/Website-Images/magnifying-glass-icon.png"></button> -->
               </form>
             </div>
             <div class="overlap-group1">
