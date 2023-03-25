@@ -36,26 +36,30 @@
         <div class="search">
           
           <div class="overlap-group">
-            <div class="search-1 valign-text-middle montserrat-normal-black-24px">Search</div>
+            <div class="search-1 valign-text-middle montserrat-normal-black-24px">
+              <form action="{{route('search')}}">
+                <input type="Search" name="search" id="search" placeholder="Search by Brand or Name">
+              </form>
+            </div>
             <div class="overlap-group1">
               <img class="icon-search" src="/Website-Images/magnifying-glass-icon.png" alt="icon-search" />
             </div>
           </div>
 
           <div class="women montserrat-bold-black-24px">WOMEN</div>
-          <a href="{{ route('products.women')}}"><div class="all-womens-shoes montserrat-bold-black-24px">All womens shoes</div></a>
-          <a href="{{ route('women.trainers')}}"><div class="trainers montserrat-normal-black-24px">Trainers</div></a>
-          <a href="{{ route('women.boots')}}"><div class="search-item montserrat-normal-black-24px">Boots</div></a>
+          <a href="{{route('products.women')}}"><div class="all-womens-shoes montserrat-bold-black-24px">All womens shoes</div></a>
+          <a href="{{route('women.trainers')}}"><div class="trainers montserrat-normal-black-24px">Trainers</div></a>
+          <a href="{{route('women.boots')}}"><div class="search-item montserrat-normal-black-24px">Boots</div></a>
           <div class="search-item montserrat-normal-black-24px">Heels</div>
           <div class="search-item montserrat-normal-black-24px">Flats</div>
           <div class="search-item montserrat-normal-black-24px">Sandals</div>
 
           
           <div class="men montserrat-bold-black-24px">MEN</div>
-          <a href="{{ route('products.men')}}"><div class="all-mens-shoes montserrat-bold-black-24px">All mens shoes</div></a>
-          <a href="{{ route('men.trainers')}}"><div class="search-item montserrat-normal-black-24px">Trainers</div></a>
-          <a href="{{ route('men.loafers')}}"><div class="search-item montserrat-normal-black-24px">Loafers</div></a>
-          <a href="{{ route('men.boots')}}"><div class="search-item montserrat-normal-black-24px">Boots</div></a>
+          <a href="{{route('products.men')}}"><div class="all-mens-shoes montserrat-bold-black-24px">All mens shoes</div></a>
+          <a href="{{route('men.trainers')}}"><div class="search-item montserrat-normal-black-24px">Trainers</div></a>
+          <a href="{{route('men.loafers')}}"><div class="search-item montserrat-normal-black-24px">Loafers</div></a>
+          <a href="{{route('men.boots')}}"><div class="search-item montserrat-normal-black-24px">Boots</div></a>
           
           <div class="search-item montserrat-normal-black-24px">Dress Shoes</div>
           <div class="search-item montserrat-normal-black-24px">Sliders</div>
