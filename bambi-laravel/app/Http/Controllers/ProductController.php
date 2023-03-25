@@ -33,6 +33,18 @@ class ProductController extends Controller
         ]);
     }
 
+    public function search(Request $request) {
+        $search = $request->search;
+        $products = Product::where(function($query) use($search) {
+            $query->where('product_brand', 'like', '%'.$search.'%')
+                  ->orWhere('product_name', 'like', '%'.$search.'%');
+            // Add more orWhere clauses for additional columns if needed
+        })->get();
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
     public function listCarouselProducts()
     {
         //Method created to get data from the 'product' table and to show them on the products view in carousel.

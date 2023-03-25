@@ -67,6 +67,9 @@ Route::get('/', [HomeController::class, 'index'])->name('welcome');
 //Route for all products
 Route::get('/shop', [ProductController::class, 'index'])->name('products.index');
 
+//Search route
+Route::get('/search', [ProductController::class, 'search'])->name('search');
+
 //Route to distinguish between mens
 Route::get('/shop/men', [ProductController::class, 'shopMen'])->name('products.men');
 
