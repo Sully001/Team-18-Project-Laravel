@@ -79,6 +79,10 @@ Route::get('/shop/men/loafers', [ProductController::class, 'shopMenLoafers'])->n
 
 Route::get('/shop/men/boots', [ProductController::class, 'shopMenBoots'])->name('men.boots');
 
+Route::get('/shop/men/dress-shoes', [ProductController::class, 'shopMenDressShoes'])->name('men.dress');
+
+Route::get('/shop/men/sliders', [ProductController::class, 'shopMenSliders'])->name('men.sliders');
+
 
 
 
@@ -89,6 +93,12 @@ Route::get('/shop/women', [ProductController::class, 'shopWomen'])->name('produc
 Route::get('/shop/women/trainers', [ProductController::class, 'shopWomenTrainers'])->name('women.trainers');
 
 Route::get('/shop/women/boots', [ProductController::class, 'shopWomenBoots'])->name('women.boots');
+
+Route::get('/shop/women/heels', [ProductController::class, 'shopWomenHeels'])->name('women.heels');
+
+Route::get('/shop/women/flats', [ProductController::class, 'shopWomenFlats'])->name('women.flats');
+
+Route::get('/shop/women/sandals', [ProductController::class, 'shopWomenSandals'])->name('women.sandals');
 
 
 

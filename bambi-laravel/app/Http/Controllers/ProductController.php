@@ -78,7 +78,6 @@ class ProductController extends Controller
 
     public function shopWomenTrainers() {
         $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Trainers')->paginate(16);
-  
         return view('shop', [
             'products' => $products,
         ]);
@@ -86,22 +85,42 @@ class ProductController extends Controller
 
     public function shopWomenBoots() {
         $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Boots')->paginate(16);
-  
         return view('shop', [
             'products' => $products,
         ]);
     }
 
+    public function shopWomenHeels() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Heels')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenFlats() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Flats')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenSandals() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Sandals')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+
+    //Mens Products
     public function shopMenTrainers() {
         $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Trainers')->paginate(16);
-  
         return view('shop', [
             'products' => $products,
         ]);
     }
     public function shopMenLoafers() {
         $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Loafers')->paginate(16);
-  
         return view('shop', [
             'products' => $products,
         ]);
@@ -109,7 +128,20 @@ class ProductController extends Controller
 
     public function shopMenBoots() {
         $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Boots')->paginate(16);
-  
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenDressShoes() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Dress Shoes')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenSliders() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Sliders')->paginate(16);
         return view('shop', [
             'products' => $products,
         ]);

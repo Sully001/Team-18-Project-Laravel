@@ -51,26 +51,24 @@
           <a href="{{route('products.women')}}"><div class="all-womens-shoes montserrat-bold-black-24px">All womens shoes</div></a>
           <a href="{{route('women.trainers')}}"><div class="trainers montserrat-normal-black-24px">Trainers</div></a>
           <a href="{{route('women.boots')}}"><div class="search-item montserrat-normal-black-24px">Boots</div></a>
-          <div class="search-item montserrat-normal-black-24px">Heels</div>
-          <div class="search-item montserrat-normal-black-24px">Flats</div>
-          <div class="search-item montserrat-normal-black-24px">Sandals</div>
-
+          <a href="{{route('women.heels')}}"><div class="search-item montserrat-normal-black-24px">Heels</div></a>
+          <a href="{{route('women.flats')}}"><div class="search-item montserrat-normal-black-24px">Flats</div></a>
+          <a href="{{route('women.sandals')}}"><div class="search-item montserrat-normal-black-24px">Sandals</div></a>
           
           <div class="men montserrat-bold-black-24px">MEN</div>
           <a href="{{route('products.men')}}"><div class="all-mens-shoes montserrat-bold-black-24px">All mens shoes</div></a>
           <a href="{{route('men.trainers')}}"><div class="search-item montserrat-normal-black-24px">Trainers</div></a>
           <a href="{{route('men.loafers')}}"><div class="search-item montserrat-normal-black-24px">Loafers</div></a>
           <a href="{{route('men.boots')}}"><div class="search-item montserrat-normal-black-24px">Boots</div></a>
-          
-          <div class="search-item montserrat-normal-black-24px">Dress Shoes</div>
-          <div class="search-item montserrat-normal-black-24px">Sliders</div>
-        
+          <a href="{{ route('men.dress')}}"><div class="search-item montserrat-normal-black-24px">Dress Shoes</div></a>
+          <a href="{{ route('men.sliders')}}"><div class="search-item montserrat-normal-black-24px">Sliders</div></a>
         </div>
 
 
 
         <div class="items-1 items-2">
-          <h1 class="title">Shop All Shoes</h1>
+          <a href="{{ route('products.index')}}"><h1 class="title">Shop All Shoes</h1></a>
+          
 
           <!-- <div class="flex-row flex"> -->
           
