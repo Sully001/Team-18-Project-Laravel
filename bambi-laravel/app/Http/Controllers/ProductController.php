@@ -13,7 +13,7 @@ class ProductController extends Controller
        if ($request->exists('sort')) {
             $products = Product::orderBy('product_price', $request->query('sort'))->paginate(16);
        } else {
-            $products = Product::paginate(16);;
+            $products = Product::inRandomOrder()->paginate(16);
        }
         return view('shop', [
             'products' => $products,
@@ -30,6 +30,18 @@ class ProductController extends Controller
             'product' => $product,
             'sizes' => $sizes,
             //'sizes' => $sizes,
+        ]);
+    }
+
+    public function search(Request $request) {
+        $search = $request->search;
+        $products = Product::where(function($query) use($search) {
+            $query->where('product_brand', 'like', '%'.$search.'%')
+                  ->orWhere('product_name', 'like', '%'.$search.'%');
+            // Add more orWhere clauses for additional columns if needed
+        })->get();
+        return view('shop', [
+            'products' => $products,
         ]);
     }
 
@@ -59,6 +71,77 @@ class ProductController extends Controller
        } else {
             $products = Product::where('product_gender', '=', 'Women')->paginate(16);
        }
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenTrainers() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Trainers')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenBoots() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Boots')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenHeels() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Heels')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenFlats() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Flats')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopWomenSandals() {
+        $products = Product::where('product_gender', '=', 'Women')->where('product_category', 'Sandals')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+
+    //Mens Products
+    public function shopMenTrainers() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Trainers')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+    public function shopMenLoafers() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Loafers')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenBoots() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Boots')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenDressShoes() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Dress Shoes')->paginate(16);
+        return view('shop', [
+            'products' => $products,
+        ]);
+    }
+
+    public function shopMenSliders() {
+        $products = Product::where('product_gender', '=', 'Men')->where('product_category', 'Sliders')->paginate(16);
         return view('shop', [
             'products' => $products,
         ]);

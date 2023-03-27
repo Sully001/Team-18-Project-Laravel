@@ -67,10 +67,40 @@ Route::get('/', [HomeController::class, 'index'])->name('welcome');
 //Route for all products
 Route::get('/shop', [ProductController::class, 'index'])->name('products.index');
 
-//Route to distinguish between mens/womens
+//Search route
+Route::get('/search', [ProductController::class, 'search'])->name('search');
+
+//Route to distinguish between mens
 Route::get('/shop/men', [ProductController::class, 'shopMen'])->name('products.men');
 
+Route::get('/shop/men/trainers', [ProductController::class, 'shopMenTrainers'])->name('men.trainers');
+
+Route::get('/shop/men/loafers', [ProductController::class, 'shopMenLoafers'])->name('men.loafers');
+
+Route::get('/shop/men/boots', [ProductController::class, 'shopMenBoots'])->name('men.boots');
+
+Route::get('/shop/men/dress-shoes', [ProductController::class, 'shopMenDressShoes'])->name('men.dress');
+
+Route::get('/shop/men/sliders', [ProductController::class, 'shopMenSliders'])->name('men.sliders');
+
+
+
+
+//Route for womens
+
 Route::get('/shop/women', [ProductController::class, 'shopWomen'])->name('products.women');
+
+Route::get('/shop/women/trainers', [ProductController::class, 'shopWomenTrainers'])->name('women.trainers');
+
+Route::get('/shop/women/boots', [ProductController::class, 'shopWomenBoots'])->name('women.boots');
+
+Route::get('/shop/women/heels', [ProductController::class, 'shopWomenHeels'])->name('women.heels');
+
+Route::get('/shop/women/flats', [ProductController::class, 'shopWomenFlats'])->name('women.flats');
+
+Route::get('/shop/women/sandals', [ProductController::class, 'shopWomenSandals'])->name('women.sandals');
+
+
 
 //Route for a single product
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('products.show');
