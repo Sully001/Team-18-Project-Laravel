@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="homepage">
-    <img src="/Website-Images/hp-background.png" alt="">
+    <img src="/Website-Images/transparent-logo1.png" id="hp-logo" alt="logo">
     <button type="button" onclick=window.location.href="{{ route('products.index') }}" class="login-btn">SHOP NOW</button>
 </div>
 
