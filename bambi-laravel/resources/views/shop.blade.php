@@ -40,11 +40,12 @@
             <form action="{{route('search')}}" class="search-bar">
                 <input type="Search" name="search" id="search" placeholder="Search">
                 <!-- <button type="submit"><img src="/Website-Images/magnifying-glass-icon.png"></button> -->
-              </form>
+              <!-- </form> -->
             </div>
             <div class="overlap-group1">
               <button type="submit"><img src="/Website-Images/magnifying-glass-icon.png"></button>
               <!-- <img class="icon-search" src="/Website-Images/magnifying-glass-icon.png" alt="icon-search" /> -->
+            </form>
             </div>
           </div>
 
