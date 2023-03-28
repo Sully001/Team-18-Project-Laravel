@@ -42,7 +42,7 @@ html,body
   background-color: var(--vis-vis);
   box-shadow: 0px 2px 2px #00000040;
   display: flex;
-  gap: 350px;
+  gap: 200px;
   justify-content: flex-start;
   margin-left: 1px;
   width: 100%;
