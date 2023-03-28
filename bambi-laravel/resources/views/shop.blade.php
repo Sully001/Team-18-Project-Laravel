@@ -99,10 +99,11 @@
       </div>
 
       <div class="credit-hero">
-        <p class="spread-the-cost-with">
-          Spread the cost with up to 4 years interest free credit* Subject to T&amp;Cs
-        </p>
         <p class="shop-shoes-from-14">
+        Spread the cost with up to 4 years interest free credit*
+        <br></br>
+        Subject to T&amp;Cs
+        <br></br>
           Shop shoes from £14.07 per month*. 0% finance is available on all purchases over £99.
         </p>
       </div>
