@@ -135,7 +135,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
+  height: 100%;
 }
 
 .shop .prod_box {
