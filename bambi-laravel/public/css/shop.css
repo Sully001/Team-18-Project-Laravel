@@ -265,7 +265,8 @@ article {
   gap: 29px;
   /* min-height: 375px; */
   /* padding: 79px 136px; */
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 1200px;
 }
 
 .shop .title {
