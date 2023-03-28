@@ -37,13 +37,14 @@
           
           <div class="overlap-group">
             <div class="search-1 valign-text-middle montserrat-normal-black-24px">
-              <form action="{{route('search')}}">
-                <input type="Search" name="search" id="search" placeholder="Search by Brand or Name">
+            <form action="{{route('search')}}" class="search-bar">
+                <input type="Search" name="search" id="search" placeholder="Search">
                 <!-- <button type="submit"><img src="/Website-Images/magnifying-glass-icon.png"></button> -->
               </form>
             </div>
             <div class="overlap-group1">
-              <img class="icon-search" src="/Website-Images/magnifying-glass-icon.png" alt="icon-search" />
+              <button type="submit"><img src="/Website-Images/magnifying-glass-icon.png"></button>
+              <!-- <img class="icon-search" src="/Website-Images/magnifying-glass-icon.png" alt="icon-search" /> -->
             </div>
           </div>
 

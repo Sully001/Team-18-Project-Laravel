@@ -115,6 +115,20 @@ html,body
   width: 469px;
 }
 
+.shop .search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding:24px 20px;
+  font-size: 20px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 .screen {
   display: flex;
   flex-wrap: wrap;
@@ -171,6 +185,18 @@ article {
   height: 56px;
   min-width: 56px;
   padding: 0 7px;
+}
+
+.shop .overlap-group1 button img {
+  width: 25px;
+}
+
+.shop .overlap-group1 button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #B39836;
 }
 
 .shop .icon-search {
