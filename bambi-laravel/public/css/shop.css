@@ -148,11 +148,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .shop .prod_box {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 5%;
+  padding-left: 1%;
   height: 2050px;
   /* width: 100%; */
   /* width: auto; */
-  width: 1200px;
+  width: 1050px;
   /* max-width: 1200px; */
 }
 
