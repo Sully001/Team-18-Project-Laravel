@@ -231,7 +231,7 @@ article {
   margin-top: 30px;
   min-height: 38px;
   width: 273px;
-  font-weight: 600;
+  font-weight: 800;
   color: black;
 }
 
@@ -266,7 +266,7 @@ article {
   line-height: normal;
   margin-top: 30px;
   min-height: 29px;
-  font-weight: 600;
+  font-weight: 800;
   color: black;
 }
 
@@ -290,13 +290,15 @@ article {
   color: black;
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-xxxxl);
-  font-weight: 400;
+  font-weight: 800;
   letter-spacing: -0.72px;
   line-height: normal;
   margin-right: 2.0px;
   min-height: 59px;
   min-width: 346px;
-  text-align: center;
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 2%;
 }
 
 .shop .flex-row {
