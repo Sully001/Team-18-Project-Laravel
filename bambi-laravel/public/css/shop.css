@@ -23,6 +23,8 @@ html,body
   display: grid;
 }
 
+.shop .all-womens-shoes:hover { color: #B39836; }
+.shop .all-mens-shoes:hover { color: #B39836; }
 .shop .montserrat-normal-black-24px:hover { color: #B39836; }
 .shop .title:hover { color: #B39836; }
 .shop .button:hover { background-color: #d2ba63; }
