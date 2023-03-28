@@ -100,7 +100,6 @@ html,body
   flex-wrap: wrap;
   /* display: block;
   overflow: auto; */
-
 }
 
 .shop .search {
@@ -114,7 +113,8 @@ html,body
   padding: 46px 42px;
   position: absolute;
   top: 0;
-  width: 469px;
+  /* width: 469px; */
+  width: 100%;
 }
 
 .shop .search-bar input {
@@ -153,8 +153,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   /* width: 100%; */
   /* width: auto; */
   width: 1200px;
+  /* max-width: 1200px; */
 }
-
 
 article {
   padding: 0.5em;
