@@ -23,7 +23,10 @@ html,body
   display: grid;
 }
 
-
+.shop .montserrat-bold-black-24px:hover { color: #B39836; }
+.shop .montserrat-normal-black-24px:hover { color: #B39836; }
+.shop .title:hover { color: #B39836; }
+.shop .button:hover { background-color: #d2ba63; }
 
 .shop .bambi-shoes-logo-text {
   height: 60px;
@@ -218,6 +221,8 @@ article {
   margin-top: 58px;
   min-height: 32px;
   width: 117px;
+  font-weight: bolder;
+  color: black;
 }
 
 .shop .all-womens-shoes {
@@ -226,6 +231,8 @@ article {
   margin-top: 30px;
   min-height: 38px;
   width: 273px;
+  font-weight: 600;
+  color: black;
 }
 
 .shop .trainers {
@@ -233,6 +240,7 @@ article {
   line-height: normal;
   margin-top: 22px;
   min-height: 29px;
+  color: black;
 }
 
 .shop .search-item {
@@ -240,6 +248,7 @@ article {
   line-height: normal;
   margin-top: 26px;
   min-height: 29px;
+  color: black;
 }
 
 .shop .men {
@@ -248,6 +257,8 @@ article {
   margin-top: 146px;
   min-height: 32px;
   width: 103px;
+  font-weight: bolder;
+  color: black;
 }
 
 .shop .all-mens-shoes {
@@ -255,6 +266,8 @@ article {
   line-height: normal;
   margin-top: 30px;
   min-height: 29px;
+  font-weight: 600;
+  color: black;
 }
 
 .shop .items-1 {
@@ -274,7 +287,7 @@ article {
 }
 
 .shop .title {
-  color: var(--black);
+  color: black;
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-xxxxl);
   font-weight: 400;
@@ -363,6 +376,7 @@ article {
   line-height: normal;
   min-width: 78px;
   text-align: center;
+  color: white;
 }
 
 .shop .items-container-2 {
