@@ -131,6 +131,13 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
+.shop .sort-by {
+  padding-top: 60px;
+  font-size: large;
+  font-weight: bold;
+  /* align-self: center; */
+}
+
 .screen {
   display: flex;
   flex-wrap: wrap;
@@ -154,8 +161,6 @@ article {
   margin : 0.45em;
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-
-
 }
 
 

@@ -48,6 +48,15 @@
             </div>
           </div>
 
+          <div class="sort-by">
+            <label for="sort">Sort By &nbsp;</label>
+
+            <select name="sort" id="sort">
+              <option value="high-to-low">Price: High to Low</option>
+              <option value="low-to-high">Price: Low to High</option>
+            </select>
+          </div>
+
           <div class="women montserrat-bold-black-24px">WOMEN</div>
           <a href="{{route('products.women')}}"><div class="all-womens-shoes montserrat-bold-black-24px">All womens shoes</div></a>
           <a href="{{route('women.trainers')}}"><div class="trainers montserrat-normal-black-24px">Trainers</div></a>
