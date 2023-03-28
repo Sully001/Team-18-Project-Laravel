@@ -148,7 +148,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .shop .prod_box {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 1%;
+  padding-left: 2%;
   height: 2050px;
   /* width: 100%; */
   /* width: auto; */
