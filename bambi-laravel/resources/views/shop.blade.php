@@ -52,6 +52,7 @@
             <label for="sort">Sort By &nbsp;</label>
 
             <select name="sort" id="sort">
+              <option value="default">Default</option>
               <option value="high-to-low">Price: High to Low</option>
               <option value="low-to-high">Price: Low to High</option>
             </select>
