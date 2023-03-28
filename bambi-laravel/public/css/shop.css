@@ -78,7 +78,7 @@
 .shop .rectangle-15 {
   height: 500px;
   object-fit: cover;
-  width: 100%;
+  width: 962px;
 }
 
 .shop .overlap-group2 {
@@ -118,7 +118,7 @@
   flex-wrap: wrap;
   padding-left: 5%;
   height: 2050px;
-  width: 1395px;
+  width: 100%;
   /* max-height: 100%;
   max-width: 100%; */
 }
@@ -230,7 +230,7 @@ article {
   gap: 29px;
   /* min-height: 375px; */
   /* padding: 79px 136px; */
-  width: 93%;
+  width: 71.7%;
 }
 
 .shop .title {
@@ -253,7 +253,7 @@ article {
 
 .shop .items {
   align-items: flex-start;
-  background-color: var(--vis-vis);
+  background-color: #FFECA6;
   border-radius: 50px;
   box-shadow: 0px 4px 4px #00000040;
   height: 20%;
@@ -268,8 +268,9 @@ article {
   background-image: url(../img/rectangle.svg);
   background-size: 100% 100%;
   border-radius: 50px;
-  height: 300px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
+  padding-left: 0.5em;
 }
 
 .shop .rectangle img {
@@ -397,7 +398,7 @@ article {
 
 .shop .button-3 {
   align-items: flex-start;
-  background-color: var(--alpine);
+  background-color: #B39836;
   border-radius: 6px;
   box-shadow: 0px 2px 4px #00000040;
   display: flex;

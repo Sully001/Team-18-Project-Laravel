@@ -27,7 +27,6 @@
 * {
   box-sizing: border-box;
 }
-
 .navbar-link-about-us {
   height: 18px;
   letter-spacing: -0.23px;
@@ -37,7 +36,6 @@
   min-width: 70px;
   text-align: center;
 }
-
 .navbar-link-contact-us {
   height: 18px;
   letter-spacing: -0.23px;
@@ -47,12 +45,10 @@
   min-width: 83px;
   text-align: center;
 }
-
 .navbar-link-basket {
   margin-left: 55px;
   min-width: 53px;
 }
-
 .log-in {
   height: 18px;
   letter-spacing: -0.23px;
@@ -60,7 +56,6 @@
   min-width: 48px;
   text-align: center;
 }
-
 .footer-a {
   align-items: flex-start;
   background-color: var(--alto);
@@ -70,19 +65,16 @@
   padding: 80px;
   width: 1920px;
 }
-
 .flex-row-1 {
   align-items: flex-start;
   display: flex;
   min-width: 1720px;
 }
-
 .logo-no-bg-01-3 {
   height: 200px;
   object-fit: cover;
   width: 200px;
 }
-
 .t-us {
   letter-spacing: -0.23px;
   line-height: 24px;
@@ -91,14 +83,12 @@
   white-space: nowrap;
   width: 173px;
 }
-
 .flex-row-2 {
   align-items: center;
   display: flex;
   margin-top: 32px;
   min-width: 1750px;
 }
-
 .copyright {
   letter-spacing: -0.23px;
   line-height: 24px;
@@ -106,7 +96,6 @@
   white-space: nowrap;
   width: 301px;
 }
-
 .follow-us {
   letter-spacing: -0.23px;
   line-height: 24px;
@@ -116,29 +105,23 @@
   white-space: nowrap;
   width: 300px;
 }
-
 .ellipse-1 {
   margin-left: 70px;
 }
-
 .ellipse-2 {
   margin-left: 31px;
 }
-
 .ellipse {
   margin-left: 30px;
 }
-
 .ellipse-3 {
   height: 44px;
   width: 44px;
 }
-
 .flex {
   align-items: flex-start;
   display: flex;
 }
-
 .navbar-link {
   height: 18px;
   letter-spacing: -0.23px;
