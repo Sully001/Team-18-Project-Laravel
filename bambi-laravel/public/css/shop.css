@@ -42,7 +42,7 @@ html,body
 
 .shop .hero {
   align-items: center;
-  background-color: var(--vis-vis);
+  background-color: #FFECA6;
   box-shadow: 0px 2px 2px #00000040;
   display: flex;
   gap: 200px;
