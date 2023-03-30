@@ -101,7 +101,7 @@
               
             @endforeach
           </div>
-          <div class="next-page">
+          <div>
             {{ $products->links() }}
           </div>
         </div>
