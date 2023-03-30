@@ -27,12 +27,12 @@ html,body
 .shop .body-text:hover { color: #B39836; }
 .shop .title:hover { color: #B39836; }
 .shop .button:hover { background-color: #d2ba63; }
-.shop .link:hover { color: #B39836; }
+.shop .sort-by-link:hover { color: #B39836; }
 
-.shop .link {
+.shop .sort-by-link {
   color: black;
   font-weight: 400;
-  font-size: medium;
+  font-size: large;
 }
 
 .shop .shop-header {
@@ -390,23 +390,8 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 .shop .products-overlay-2 {
   display: flex;
   flex-direction: column;
-  
 }
 
-.sort-by a {
-  all: unset !important;
-  cursor: pointer !important;
-}
-
-.sort-by div {
-  padding-top: 5px;
-  font-size: medium;
-  font-weight: 400;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-
-.sort-by a:hover {
-  color: #B39836 !important;
-}
+/* .bootstrap-5 .page-item {
+  background: #FFF6D3;
+} */
