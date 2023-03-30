@@ -48,8 +48,8 @@
           <div class="sort-by">
             <label for="sort">Sort By &nbsp;</label>
             <div>
-              <a href="{{ URL::current()."?sort=desc" }}"><div>High To Low</div></a>
-              <a href="{{ URL::current()."?sort=asc" }}"><div>Low To High</div></a>
+              <a class="sort-by-link" href="{{ URL::current()."?sort=desc" }}"><div>High To Low</div></a>
+              <a class="sort-by-link" href="{{ URL::current()."?sort=asc" }}"><div>Low To High</div></a>
             </div>
           </div>
 
