@@ -101,7 +101,9 @@
               
             @endforeach
           </div>
-          <!-- </div> -->
+          <div>
+            {{ $products->links() }}
+          </div>
         </div>
       </div>
 
