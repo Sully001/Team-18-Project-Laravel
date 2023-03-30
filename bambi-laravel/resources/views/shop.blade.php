@@ -55,9 +55,11 @@
               <a href="{{ URL::current()."?sort=desc" }}"><div>High To Low</div></a>
               <a href="{{ URL::current()."?sort=asc" }}"><div>Low To High</div></a>
             </div>
-            
           </div>
 
+
+
+          
           <div class="women montserrat-bold-black-24px">WOMEN</div>
           <a href="{{route('products.women')}}"><div class="all-womens-shoes montserrat-bold-black-24px">All womens shoes</div></a>
           <a href="{{route('women.trainers')}}"><div class="trainers montserrat-normal-black-24px">Trainers</div></a>
