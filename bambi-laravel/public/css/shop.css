@@ -409,7 +409,7 @@ article {
   align-items: flex-start;
   background-color: #ffc14d;
   box-shadow: 0px 4px 4px #00000040;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
   gap: 29px;
   min-height: 375px;
@@ -438,6 +438,7 @@ article {
   margin-right: 29.0px;
   min-height: 39px;
   min-width: 1319px;
+  padding-top: 55px;
   text-align: center;
 }
 
