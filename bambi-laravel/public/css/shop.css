@@ -405,3 +405,22 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   flex-direction: column;
   
 }
+
+.sort-by a {
+  all: unset !important;
+  cursor: pointer !important;
+}
+
+.sort-by div {
+  padding-top: 5px;
+  font-family: var(--font-family-montserrat) !important;
+  font-size: medium;
+  font-weight: 400;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.sort-by a:hover {
+  color: #B39836 !important;
+}
