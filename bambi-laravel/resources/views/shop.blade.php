@@ -50,9 +50,9 @@
           </div>
 
           <div class="sort-by">
-            <label for="sort">Sort By &nbsp;</label>
-            <a href="{{ URL::current()."?sort=desc" }}"><div>Hight To Low</div></a>
-            <a href="{{ URL::current()."?sort=asc" }}"><div>Low To High</div></a>
+            <label for="sort">Sort By</label>
+            <a class="link" href="{{ URL::current()."?sort=desc" }}"><div>High to Low</div></a>
+            <a class="link" href="{{ URL::current()."?sort=asc" }}"><div>Low to High</div></a>
           </div>
 
           <div class="women montserrat-bold-black-24px">WOMEN</div>
@@ -101,7 +101,7 @@
               
             @endforeach
           </div>
-          <div>
+          <div class="next-page">
             {{ $products->links() }}
           </div>
         </div>

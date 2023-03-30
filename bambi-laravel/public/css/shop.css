@@ -28,6 +28,17 @@ html,body
 .shop .montserrat-normal-black-24px:hover { color: #B39836; }
 .shop .title:hover { color: #B39836; }
 .shop .button:hover { background-color: #d2ba63; }
+.shop .link:hover { color: #B39836; }
+
+.shop .link {
+  color: black;
+  font-weight: 400;
+  font-size: medium;
+}
+
+.shop .next-page {
+  background: #FFF6D3;
+}
 
 .shop .bambi-shoes-logo-text {
   height: 60px;
