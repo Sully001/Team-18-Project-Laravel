@@ -51,12 +51,8 @@
 
           <div class="sort-by">
             <label for="sort">Sort By &nbsp;</label>
-
-            <select name="sort" id="sort">
-              <option value="default">Default</option>
-              <option value="high-to-low">Price: High to Low</option>
-              <option value="low-to-high">Price: Low to High</option>
-            </select>
+            <a href="{{ URL::current()."?sort=desc" }}"><div>Hight To Low</div></a>
+            <a href="{{ URL::current()."?sort=asc" }}"><div>Low To High</div></a>
           </div>
 
           <div class="women montserrat-bold-black-24px">WOMEN</div>

@@ -32,7 +32,7 @@
                 <li><a class="li" href="/about">About Us</a></li>
                 <li><a class="li" href="/contact">Contact Us</a></li>
                 @if (Auth::check())
-                    <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket</a></li>
+                    <li><a class="li" href="{{ route('basket', auth()->user()->id)}}">Basket({{app('App\Http\Controllers\BasketController')->getBasketCount()}})</a></li>
                     <li><a class="li" href="{{ route('orders')}}">Orders</a></li>
                 @else
                     <li><a class="li" href="{{ route('basket', 2000) }}">Basket</a></li>

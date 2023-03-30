@@ -89,6 +89,10 @@ class BasketController extends Controller
 
         return redirect()->back()->with('delete', 'Successfully Deleted');
     }
-         
+
+    public function getBasketCount() {
+        $basketCount = Basket::where('user_id', auth()->user()->id)->sum('quantity');
+        return $basketCount;
+    }
 }
 

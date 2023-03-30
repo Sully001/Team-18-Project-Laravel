@@ -12,6 +12,27 @@
             <p>{{ session('mssg') }}</p>
         </div>
     @endif
+    @if ($errors->Any())
+        <div class="alert alert-danger" role="alert">
+            @error('first_name')
+                <p>{{ $message }}*</p>
+            @enderror
+            @error('last_name')
+                <p>{{ $message }}*</p>
+            @enderror
+            @error('email')
+                <p>{{ $message }}*</p>
+            @enderror
+            @error('password')
+                <p>{{ $message }}*</p>
+            @enderror
+        </div>
+    @endif
+    @if (session('status'))
+        <div class="alert alert-danger" role="alert">
+            <p>{{ session('status') }}</p>
+        </div>
+    @endif
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,38 +49,20 @@
             <form class = "forms_" action="{{ route('register') }}" method="POST">
                 @csrf
                 <div>
-                    <!--<label for="first_name">First Name:</label>-->
                     <input class = "input_fields" type="text" name="first_name" id="first_name" placeholder="First Name" value="{{ old('first_name') }}">
                 </div>
-                @error('first_name')
-                    <p>{{ $message }}</p>
-                @enderror
                 <div>
-                    <!--<label for="last_name">Last Name:</label>-->
                     <input class = "input_fields" type="text" name="last_name" id="last_name" placeholder="Last Name" value="{{ old('last_name') }}">
                 </div>
-                @error('last_name')
-                    <p>{{ $message }}</p>
-                @enderror
                 <div>
-                    <!--<label for="email">Email</label>-->
                     <input class = "input_fields"  type="email" name="email" id="email" placeholder="Email address" value="{{ old('email') }}">
                 </div>
-                @error('email')
-                    <p>{{ $message }}</p>
-                @enderror
                 <div>
-                    <!--<label for="password">Password</label>-->
                     <input class = "input_fields"  type="password" name="password" id="password" placeholder="Create Password">
                 </div>
                 <div>
-                    <!--<label for="password_confirmation">Repeat Password</label>-->
                     <input class = "input_fields" type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password">
                 </div>
-                @error('password')
-                    <p>{{ $message }}</p>
-                @enderror
-
                 <button id = "reg_submit" class = "submit_button" type="submit">Register</button>
             </form>
         </div>
@@ -70,18 +73,13 @@
             <p class = "caption" id = "login_caption">Have an existing account, Log in?</p>
         </div>
 
-            @if (session('status'))
-                {{ session('status') }}
-            @endif
 
             <form class = "forms_" action="{{ route('signin') }}" method="POST">
                 @csrf
                 <div>
-                    <!--<label for="email">Email</label>-->
                     <input class = "input_fields"  type="email" name="email" id="email" placeholder="Email address" value="{{ old('email') }}">
                 </div>
                 <div>
-                    <!--<label for="password">Password</label>-->
                     <input class = "input_fields"  type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <button id = "log_submit" class = "submit_button" type="submit">Login</button>

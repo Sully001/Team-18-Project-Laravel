@@ -4,6 +4,8 @@
     justify-content: center;
     margin-top: 170px;
     margin-bottom: 170px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .form_sect{
@@ -53,17 +55,9 @@
     margin-left: -40%;
 }
 
-#reg_form{
-    margin-right: 40px;
-}
 
-#reg_submit{
-    margin-left: -223px;
-}
 
-#log_submit{
-    margin-left: -224px;
-}
+
 
 .submit_button{
     border: none;
