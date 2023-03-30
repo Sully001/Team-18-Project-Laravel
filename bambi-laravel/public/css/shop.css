@@ -391,3 +391,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   display: flex;
   flex-direction: column;
 }
+
+/* .bootstrap-5 .page-item {
+  background: #FFF6D3;
+} */
