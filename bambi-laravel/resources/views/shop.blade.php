@@ -79,7 +79,7 @@
 
               <article class="products products-overlay-2 grid-item">
 
-                <div class="prod-img"><img src="/images/{{ $product->product_image}}" alt="Shoes" ></div>
+                <div class="prod-img"><img src="https://bambiadmin.azurewebsites.net/images/{{ $product->product_image}}" alt="Shoes" ></div>
                 <div class="prod-brand">{{ $product->product_brand }}</div>
                 <div class="prod-name">{{ $product->product_name }}</div>
                 <div class="prod-price">£{{ $product->product_price }}</div>

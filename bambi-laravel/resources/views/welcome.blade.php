@@ -30,7 +30,7 @@
                         <!-- This line unconditionally adds an image with appropriate text -->
                         <div class="col text-center card" id="carousel-card">
                             <!-- Fetches images from shop.blade and formats them into carousel  -->
-                                <img src="/images/{{ $product->product_image}}" alt="Shoes" >
+                                <img src="https://bambiadmin.azurewebsites.net/images/{{ $product->product_image}}" alt="Shoes" >
                                 <h2 class="title">{{ $product->product_name }}</h2>
                                 <span class="price">£{{ $product->product_price }}</span>
                                 <button class="review-button" onclick=window.location.href="{{ route('products.show', $product->product_id) }}">Quick View</button>

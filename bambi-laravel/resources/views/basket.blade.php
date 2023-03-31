@@ -42,7 +42,7 @@
       <div class = "item_sect">
         @foreach ($products as $product)
         <div class = "item_box">
-          <img id = "product_image" src="/images/{{ $product['image'] }}" alt="Shoes" height="160px" width="160px">
+          <img id = "product_image" src="https://bambiadmin.azurewebsites.net/images/{{ $product['image'] }}" alt="Shoes" height="160px" width="160px">
           <div class = "product_info">
               <h5 id = "product_title">{{ $product['brand'] }} {{ $product['name'] }}</h5> 
               <form action="{{ route('basket.remove') }}" method="POST">

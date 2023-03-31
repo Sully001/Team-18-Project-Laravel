@@ -24,7 +24,7 @@
     @endif
 
     <div class = "shoe_img">
-      <img src="/images/{{ $product->product_image }}" alt="Shoes" height="500px" width="500px">
+      <img src="https://bambiadmin.azurewebsites.net/images/{{ $product->product_image }}" alt="Shoes" height="500px" width="500px">
     </div>
  
     <div class = "product_sect">
