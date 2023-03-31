@@ -5,33 +5,31 @@
 @endsection
 
 @section('content')
-
-  @foreach ($orders as $order)
+  <h3>Here are you orders: Latest Orders Appear First</h3>
+  @for ($i = count($orders) - 1; $i >= 0; $i--)
  
   <div class="orders-contain">
 
     <div class="orders-card">
       <div class="order-no"> 
-        <p>Order No: {{ $loop->index + 1 }}</p>
+        <p>Order No: {{$i + 1}}</p>
       </div>
       <div class="order-status"> 
-        <p>Status: {{ $order->order_completion }}</p> 
+        <p>Status: {{ $orders[$i]->order_completion }}</p> 
       </div>
       <div class="order-dt"> 
-        <p>{{ $order->created_at }}</p>
+        <p>{{ $orders[$i]->created_at }}</p>
       </div>
       <div class="order-total"> 
-        <p>£{{ $order->total }}</p> 
+        <p>£{{ $orders[$i]->total }}</p> 
       </div>
       <div class="view-order"> 
-        <p><a href="/order/{{$order->order_id}}">
+        <p><a href="/order/{{$orders[$i]->order_id}}">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </a></p>
       </div>
     </div>
-
   </div>
-
-@endforeach
+@endfor
 
 @endsection

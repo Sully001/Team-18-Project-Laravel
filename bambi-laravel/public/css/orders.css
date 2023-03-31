@@ -63,3 +63,8 @@ grid-area: 1 / 3 / 3 / 4;
     margin-bottom: -3%;
     margin-left: 60%;
 }
+
+h3 {
+    text-align: center;
+    padding-top: 20px;
+}
