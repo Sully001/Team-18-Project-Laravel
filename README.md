@@ -1,5 +1,4 @@
-![plot](./bambi-laravel/public/images/Bambi_Shoes_Logo_no-bg.png)
-<img src="./bambi-laravel/public/images/Bambi_Shoes_Logo_no-bg.png" width="80" height="80">
+<img src="./bambi-laravel/public/images/Bambi_Shoes_Logo_no-bg.png" style="background-color: white;">
 
 
 Bambi! A part of an e-commerce project that was built using the Laravel framework.
