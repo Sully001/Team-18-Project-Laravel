@@ -1,8 +1,8 @@
 ![plot](./bambi-laravel/public/images/Bambi_Shoes_Logo_no-bg.png)
+<img src="./bambi-laravel/public/images/Bambi_Shoes_Logo_no-bg.png" width="80" height="80">
 
 
-Team-18-Project-Laravel
-A part of an e-commerce project that was built using the Laravel framework.
+Bambi! A part of an e-commerce project that was built using the Laravel framework.
 
 <h1>Description</h1>
 Bambi is a high end, high quality fashion e-commerce store selling the greatest and latest in designer shoes. The backend of this site was built with a PHP framework (Laravel). The front end of the site was built using HTML, CSS and Javascript. Our database uses MySQL and it is hosted on Azure.
