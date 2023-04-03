@@ -1,4 +1,4 @@
-# -Team-18-Project-Laravel
+Team-18-Project-Laravel
 A part of an e-commerce project that was built using the Laravel framework.
 
 <h1>Description</h1>
